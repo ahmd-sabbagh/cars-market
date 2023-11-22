@@ -1,0 +1,97 @@
+/* Panner */
+.Home .Panner {
+  height: 243px;
+  background-color: var(--main-color);
+  font-weight: 700;
+  font-size: 24px;
+}
+/* Panner */
+/* Order */
+.Home .Orders {
+  background-color: var(--main-color);
+  position: relative;
+}
+.Home .Orders::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+  background-color: var(--green-color);
+}
+.App[dir="rtl"] .Home .Orders::after {
+  left: 0;
+}
+.App[dir="ltr"] .Home .Orders::after {
+  right: 0;
+}
+.Home .Orders .container {
+  position: relative;
+  z-index: 3;
+}
+.Home .Orders .image {
+  min-width: 134px;
+  max-width: 134px;
+  height: 107px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Home .Orders .blue .text p {
+  color: #fff;
+}
+.Home .Orders .green p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 140%; /* 28px */
+}
+.Home .Orders .green a {
+  background-color: #fff;
+  padding: 22px 54px;
+  color: var(--green-color);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 6px;
+}
+@media (max-width: 767px) {
+  .Home .Orders::after {
+    width: 100%;
+    height: 46%;
+    bottom: 0 !important;
+    top: auto;
+  }
+}
+/* Order */
+/* Application */
+.Home .Applications {
+  padding: 70px 0;
+}
+.Home .Applications h3 {
+  margin-bottom: 32px;
+}
+/* Application */
+/* AboutCars */
+.Home .AboutCars {
+  background-color: #f0f2f6;
+}
+.Home .AboutCars .text h3 {
+  color: var(--main-color);
+}
+.Home .AboutCars .text h4 {
+  color: var(--text-color);
+}
+.Home .AboutCars .text p {
+  color: #6a6a6a;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.Home .AboutCars .text a {
+  padding: 21px 75px;
+  background-color: var(--main-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+/* AboutCars */
+

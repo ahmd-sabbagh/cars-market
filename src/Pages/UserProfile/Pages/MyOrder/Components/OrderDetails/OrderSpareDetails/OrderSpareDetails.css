@@ -1,0 +1,96 @@
+.OrderSpareDetails.body {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+/* OrderDetailsCard */
+.OrderSpareDetails.OrderDetailsCard span {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+.OrderSpareDetails.OrderDetailsCard span:last-child {
+  font-weight: 500;
+}
+/* SpareCard */
+.SpareCard .image {
+  width: 110px;
+  height: 94px;
+}
+.SpareCard .text h5 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--text-color);
+}
+.SpareCard .text span {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.SpareCard .text span:last-child {
+  font-weight: 600;
+}
+/* Menu */
+.SpareCard .menu {
+  width: 100px;
+}
+
+.SpareCard .menu button {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  background-color: transparent;
+}
+.SpareCard .menu button:hover {
+  background-color: #e8e9f0;
+}
+/* Media */
+@media (max-width: 767px) {
+  .SpareCard .image {
+    width: 51px;
+    height: 40px;
+  }
+}
+/* EditSpareParts */
+@media (min-width: 768px) {
+  .OrderSpareDetails .EmptyPopup .cont {
+    transform: scale(0.9);
+  }
+}
+.OrderSpareDetails .EmptyPopup {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.OrderSpareDetails .EmptyPopup::-webkit-scrollbar {
+  display: none;
+}
+textarea::-webkit-scrollbar {
+  display: none;
+}
+.EditSpareParts {
+  max-width: 750px;
+}
+.EditSpareParts .upload-photo {
+  min-height: 120px;
+  border-radius: 8px;
+  border: 1px dashed #018543;
+  background: #f7f7f7;
+}
+.EditSpareParts .image-view {
+  display: block;
+  width: 300px;
+  height: 100px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* EditSpareParts */

@@ -1,0 +1,20 @@
+.TextMessage .Text {
+  border-radius: 9px;
+  width: fit-content;
+  padding: 10px 12px;
+}
+.TextMessage.me .Text {
+  background-color: var(--main-color);
+  color: white;
+}
+.TextMessage.you .Text {
+  background-color: #f7f7f7;
+  color: var(--text-color);
+}
+.TextMessage .Text span:last-child {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 3px;
+}

@@ -1,0 +1,58 @@
+@media (min-width: 992px) {
+  .SideBarWindow {
+    position: sticky;
+    top: 117px;
+  }
+}
+@media (max-width: 991px) {
+  .SideBarWindow.filter-Setting {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 400;
+    width: 300px;
+    transition: 0.5s;
+  }
+  .App[dir="ltr"] .SideBarWindow.filter-Setting,
+  .Vendor[dir="ltr"] .SideBarWindow.filter-Setting {
+    left: 0;
+    box-shadow: -20px 0px 20px 10px #00000033;
+  }
+  .App[dir="rtl"] .SideBarWindow.filter-Setting,
+  .Vendor[dir="rtl"] .SideBarWindow.filter-Setting {
+    right: 0;
+    box-shadow: 20px 0px 20px 10px #00000033;
+  }
+}
+.App[dir="rtl"] .filter-Setting-status,
+.Vendor[dir="rtl"] .filter-Setting-status {
+  right: -300px !important;
+}
+.App[dir="ltr"] .filter-Setting-status,
+.Vendor[dir="ltr"] .filter-Setting-status {
+  left: -300px !important;
+}
+.SideBarWindow.filter-Setting .icon-container {
+  width: 100%;
+}
+
+.SideBarWindow.filter-Setting .icon-container .icon {
+  font-size: 48px;
+  height: 40px;
+  color: var(--green-color);
+  top: 92px;
+  box-shadow: 0px 0px 14px 0px #00000033;
+  opacity: 0.3;
+  transition: 0.3s;
+}
+.SideBarWindow.filter-Setting .icon-container .icon:hover {
+  opacity: 1;
+}
+.App[dir="rtl"] .SideBarWindow.filter-Setting .icon,
+.Vendor[dir="rtl"] .SideBarWindow.filter-Setting .icon {
+  left: -63px !important;
+}
+.App[dir="ltr"] .SideBarWindow.filter-Setting .icon,
+.Vendor[dir="ltr"] .SideBarWindow.filter-Setting .icon {
+  right: -63px !important;
+}

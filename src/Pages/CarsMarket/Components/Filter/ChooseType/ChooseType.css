@@ -1,0 +1,22 @@
+.ChooseType .nav span:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  .ChooseType .nav .icon {
+    font-size: 23px;
+  }
+.ChooseType .cont label {
+  padding: 5px 18px;
+  border-radius: 25px;
+  border: 0.5px solid #dedede;
+  font-size: 14px;
+  font-weight: 400;
+  color: #686868;
+}
+.ChooseType .cont label:has(input[type="checkbox"]:checked) {
+  border-color: #f2c94c;
+}
+.ChooseType .cont label:has(input[type="radio"]:checked) {
+  border-color: #f2c94c;
+}

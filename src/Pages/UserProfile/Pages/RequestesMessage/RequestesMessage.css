@@ -1,0 +1,127 @@
+.RequestesMessage .types span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.RequestesMessage .top .types-window {
+  min-width: 120px;
+}
+.App[dir="rtl"] .RequestesMessage .top .types-window {
+  left: 0;
+}
+.App[dir="ltr"] .RequestesMessage .top .types-window {
+  right: 0;
+}
+.RequestesMessage .top .types-window ul li {
+  padding: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.RequestesMessage .top .types-window ul li:hover {
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+/* Done Deal Btn */
+.RequestesMessage .done-deal-btn .hent {
+  padding: 16px;
+  border-radius: 8px;
+  background: rgb(27 36 105 / 10%);
+  color: var(--text-color);
+}
+.RequestesMessage .done-deal-btn .btn-blue {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.App[dir="rtl"] .RequestesMessage .done-deal-btn {
+  padding-right: 20px;
+}
+.App[dir="ltr"] .RequestesMessage .done-deal-btn {
+  padding-left: 20px;
+}
+.RequestesMessage .done-deal-btn .select-spare div {
+  max-width: 90%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.RequestesMessage .done-deal-btn .select-spare button {
+  color: var(--main-color);
+}
+/* Done Deal Btn */
+/* Spare Parts */
+.App[dir="rtl"] .RequestesMessage .spare-parts {
+  padding-right: 20px;
+}
+.App[dir="ltr"] .RequestesMessage .spare-parts {
+  padding-left: 20px;
+}
+.RequestesMessage .spare-parts .spare {
+  border-radius: 8px;
+  padding: 6px 15px;
+}
+.RequestesMessage .spare-parts label input:checked ~ .spare {
+  border: 1.5px solid #f2c94c !important;
+}
+.RequestesMessage .spare-parts .spare .text > span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+.RequestesMessage .spare-parts .spare .made span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.RequestesMessage .spare-parts .spare .made span:first-child {
+  color: #6a6a6a;
+}
+.RequestesMessage .spare-parts .spare .price {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--text-color);
+}
+/* Popup */
+.confirm-buy {
+  width: 250px;
+}
+.confirm-buy > div {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.confirm-buy .buttons button,
+.lottie .buttons button {
+  display: block;
+  flex: 1;
+  border-radius: 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 11px 24px;
+}
+.confirm-buy .buttons button:first-child,
+.lottie .buttons button:first-child {
+  border: none;
+  color: white;
+  background-color: var(--main-color);
+}
+.confirm-buy .buttons button:last-child,
+.lottie .buttons button:last-child {
+  border: 1px solid #1b2469;
+  background-color: transparent;
+}
+.lottie .text {
+  max-width: 456px;
+}
+/* Popup */

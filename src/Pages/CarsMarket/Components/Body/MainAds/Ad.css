@@ -1,0 +1,85 @@
+.MainAd:hover {
+  box-shadow: 0 0 20px #00000012;
+  transform: scale(1.02);
+}
+.MainAd .text .top h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  line-height: 24px;
+}
+.MainAd .text .top p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #acacac;
+  line-height: 24px;
+}
+.MainAd .text .bottom {
+  gap: 32px;
+}
+.MainAd .text .bottom span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-color);
+}
+.MainAd .image {
+  min-width: 190px;
+  max-width: 190px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.App[dir="ltr"] .MainAd .image {
+  border-radius: 0 7px 7px 0;
+}
+.App[dir="rtl"] .MainAd .image {
+  border-radius: 7px 0px 0 7px;
+}
+
+@media (min-width: 768px) {
+  .MainAd .image {
+    height: 131px;
+  }
+}
+@media (max-width: 767px) {
+  .MainAd .text .bottom {
+    gap: 8px;
+  }
+}
+@media (max-width: 467px) {
+  .MainAd .image {
+    min-width: 135px;
+    max-width: 135px;
+  }
+}
+/* Menu */
+.MainAd .Menu {
+  flex: 1;
+  position: absolute;
+  top: 16px;
+}
+.MainAd .Menu .list {
+  width: 92px;
+}
+.MainAd .Menu .list a {
+  color: var(--text-color);
+}
+.MainAd .Menu .list button {
+  text-align: unset;
+  color: var(--text-color);
+}
+.MainAd .Menu .list a:hover {
+  color: var(--green-color);
+  font-weight: 700;
+}
+.MainAd .Menu .list button:hover{
+  color: var(--red-color);
+  font-weight: 700;
+}
+.App[dir="rtl"] .MainAd .Menu {
+  left: 6px;
+}
+.App[dir="ltr"] .MainAd .Menu {
+  right: 6px;
+}

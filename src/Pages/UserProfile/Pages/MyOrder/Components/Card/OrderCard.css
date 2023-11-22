@@ -1,0 +1,48 @@
+.OrderCard .Nav span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.OrderCard .Nav span:last-child {
+  color: var(--text-color);
+}
+/* Body */
+.OrderCard .Information .parts {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--text-color);
+}
+.OrderCard .Information button {
+  font-size: 12px;
+  font-weight: 500;
+  color: #f2c94c;
+}
+/* Buttons */
+.OrderCard .Buttons button {
+  background-color: var(--main-color);
+  padding: 13px;
+  width: 100%;
+  border-radius: 8px;
+}
+.OrderCard .Buttons a {
+  padding: 13px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1.5px solid #006838;
+  color: #006838;
+}
+/* media */
+@media (min-width: 768px) {
+  .OrderCard .Information .parts {
+    max-width: 247px;
+  }
+  .OrderCard .Buttons {
+    max-width: 315px;
+  }
+}
+@media (max-width: 767px) {
+  .OrderCard .Nav .status {
+    width: 85px;
+  }
+}

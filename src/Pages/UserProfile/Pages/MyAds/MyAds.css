@@ -1,0 +1,41 @@
+.MyAds .Header p {
+  max-width: 533px;
+}
+/* Main Ads */
+.MyAds .MainAd {
+    flex-direction: row-reverse;
+    justify-content: start !important;
+    border-radius: 8px;
+    border: 0.7px solid  #d9d9d9; 
+  }
+  @media (max-width: 767px) {
+    .MyAds .MainAd {
+      border: 0.5px solid #dedede !important;
+    }
+    .MyAds .MainAd .text .top h3 {
+      font-size: 12px !important;
+    }
+    .MyAds .MainAd .text .bottom span {
+      font-size: 10px !important;
+    }
+    .MyAds .MainAd .text .bottom {
+      gap: 4px !important;
+    }
+    .MyAds .MainAd .image {
+      width: 130px !important;
+      height: auto !important;
+    }
+  }
+/* Main Ads */
+@media (max-width: 767px) {
+  .MyAds .Header .btn-blue {
+    width: 100% !important;
+  }
+}
+
+.App[dir="rtl"] .MyAds .MainAd .image {
+  border-radius: 0 7px 7px 0 !important;
+}
+.App[dir="ltr"] .MyAds .MainAd .image {
+  border-radius: 7px 0px 0 7px !important;
+}

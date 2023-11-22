@@ -1,0 +1,12 @@
+.PackageUsed .Card {
+  flex-basis: 500px;
+}
+.PackageUsed .Count {
+  background: #f7f7f7;
+}
+.PackageUsed .icon {
+  width: 78px;
+  height: 78px;
+  background-color: #1b2469;
+  border-radius: 50%;
+}

@@ -1,0 +1,91 @@
+@media (max-width: 991px) {
+  .Filter {
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .Filter::-webkit-scrollbar {
+    display: none;
+  }
+}
+.Filter > h4 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+/* Filter Saved */
+.Filter .filter-controler {
+  padding-bottom: 14px;
+}
+.Filter .filter-controler span:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+.Filter .filter-controler span:last-child {
+  font-size: 23px;
+}
+.Filter .SavedFliter .cont {
+  border-radius: 3px;
+  background: #f7f7f7;
+}
+.Filter .SavedFliter h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #080a1f;
+}
+.Filter .SavedFliter p span:first-child {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6a6a6a;
+}
+.Filter .SavedFliter p span:last-child {
+  font-size: 12px;
+  font-weight: 400;
+  color: #080a1f;
+}
+.Filter .SavedFliter button,
+.Filter .confirm {
+  min-width: 83px;
+  max-width: 83px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+.Filter .SavedFliter .deleteFilter {
+  position: absolute;
+  top: 16px;
+  font-size: 20px;
+  color: #006838;
+}
+.App[dir="rtl"] .Filter .SavedFliter .deleteFilter {
+  left: 16px;
+}
+.App[dir="ltr"] .Filter .SavedFliter .deleteFilter {
+  right: 16px;
+}
+/* Filter Saved */
+.Filter .ChooseType:not(:last-child) {
+  border-top: var(--bs-border-width) var(--bs-border-style)
+    var(--bs-border-color) !important;
+  border-bottom: var(--bs-border-width) var(--bs-border-style)
+    var(--bs-border-color) !important;
+  padding: 16px 0;
+}
+.Filter .ChooseType:last-child {
+  padding-top: 16px;
+}
+/* React Range Slider */
+.RangeContainer .Range:last-child {
+  border-top: var(--bs-border-width) var(--bs-border-style)
+    var(--bs-border-color) !important;
+}
+.range-slider .range-slider__thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #f2c94c;
+  filter: drop-shadow(0px 4px 4px rgba(53, 53, 53, 0.15));
+}
+.range-slider .range-slider__range {
+  background-color: #f2c94c;
+}

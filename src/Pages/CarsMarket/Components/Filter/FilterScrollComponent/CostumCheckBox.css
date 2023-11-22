@@ -1,0 +1,74 @@
+/* Customize the label (the container-custom) */
+.container-custom {
+  display: block;
+  position: relative;
+  padding: 0 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Hide the browser's default checkbox */
+.container-custom input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  height: 22px;
+  width: 22px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.App[dir="ltr"] .container-custom .checkmark {
+  left: 0;
+}
+
+/* On mouse-over, add a grey background color */
+.container-custom:hover input ~ .checkmark {
+  border-color: #f2c94c;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-custom input:checked ~ .checkmark {
+  border-color: #f2c94c;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-custom input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-custom .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #f2c94c;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

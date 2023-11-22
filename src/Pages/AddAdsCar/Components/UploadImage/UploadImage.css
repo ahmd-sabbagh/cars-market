@@ -1,0 +1,28 @@
+.UploadImage .image {
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  width: 100%;
+  height: 233.218px;
+}
+.UploadImage .images-up label {
+  width: 46.206px;
+  height: 37.615px;
+  position: relative;
+  /* z-index: -1; */
+  background-color: transparent;
+}
+.UploadImage .close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--red-color);
+  color: white;
+  font-weight: 600;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+.UploadImage .images-up label input {
+  display: none;
+}

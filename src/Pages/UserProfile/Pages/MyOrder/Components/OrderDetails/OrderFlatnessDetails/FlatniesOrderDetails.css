@@ -1,0 +1,41 @@
+.FlatniesOrderDetails .Details .location {
+  gap: 75px;
+  max-width: 360px;
+}
+.FlatniesOrderDetails .Details .location span:first-child {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #6a6a6a;
+}
+.FlatniesOrderDetails .Details .location span:last-child {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--text-color);
+}
+/* Icons */
+.FlatniesOrderDetails .Details .icons .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid #fcbc04;
+}
+.FlatniesOrderDetails .Details .icons .line {
+  flex-grow: 1;
+  border-left: 1px dashed;
+}
+/* Clarifications */
+.FlatniesOrderDetails .Clarifications .cont {
+  max-width: 400px;
+}
+.FlatniesOrderDetails .Clarifications .cont p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #080A1F;
+}
+/* Image */

@@ -1,0 +1,52 @@
+.ServiceProviderDetails {
+  background: #f7f7f7;
+}
+.ServiceProviderDetails .TopHead .image {
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+}
+/* Description */
+.ServiceProviderDetails .Details {
+  max-width: 793px;
+}
+/* Customer Rating */
+.ServiceProviderDetails .CustomerRating .Customer {
+  max-width: 486px;
+}
+.ServiceProviderDetails .CustomerRating .Customer .info .image {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+.ServiceProviderDetails .CustomerRating .Customer .info .name {
+  font-size: 12px;
+  font-weight: 500;
+}
+.ServiceProviderDetails .CustomerRating .Customer .info .date {
+  font-size: 10px;
+  font-weight: 400;
+  color: #6c6c6c;
+}
+.ServiceProviderDetails .CustomerRating .Customer .RatingView {
+  height: 15px !important;
+}
+.ServiceProviderDetails .CustomerRating .Customer .RatingView .RatingViewStar {
+  width: 16px !important;
+}
+.ServiceProviderDetails .CustomerRating .Customer p {
+  max-width: 361px;
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 400;
+}
+.ServiceProviderDetails .CustomerRating .view-all button{
+    color: #F2C94C;
+}
+/* Media */
+@media (max-width: 767px) {
+  .ServiceProviderDetails .TopHead .image {
+    width: 100px;
+    height: 100px;
+  }
+}

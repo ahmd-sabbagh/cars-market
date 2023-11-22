@@ -1,0 +1,34 @@
+.DoneAddNewCar {
+  background: rgba(30, 27, 27, 0.53);
+  min-height: 100vh;
+  position: fixed;
+  z-index: 1000;
+}
+.DoneAddNewCar .lottie {
+  width: 150px;
+}
+.DoneAddNewCar p {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  max-width: 283px;
+  text-align: center;
+}
+.DoneAddNewCar button {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  width: 100%;
+}
+.DoneAddNewCar .cont button:first-of-type {
+  border: none;
+}
+.DoneAddNewCar .cont button:last-child {
+  border: 1.5px solid var(--main-color);
+  color: var(--text-color);
+}

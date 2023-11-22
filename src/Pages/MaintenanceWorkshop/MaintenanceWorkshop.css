@@ -1,0 +1,59 @@
+.MaintenanceWorkshop {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 176, 243, 0.08) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  @media (min-width: 768px) {
+    .MaintenanceWorkshop .width-90 {
+      max-width: 90%;
+    }
+  }
+  .MaintenanceWorkshop .head p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6a6a6a;
+    max-width: 460px;
+  }
+  .MaintenanceWorkshop .upload-photo {
+    min-height: 168px;
+    border-radius: 8px;
+    border: 1px dashed #e2e2e2;
+    background: #f7f7f7;
+  }
+  .MaintenanceWorkshop .image-view{
+    display: block;
+    width: 200px;
+    height: 100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .MaintenanceWorkshop .line {
+    display: block;
+    height: 1px;
+    background: #cdcdcd;
+    width: 100%;
+  }
+  .MaintenanceWorkshop .add-spare .add-spare-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    min-width: 252px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .MaintenanceWorkshop button[type="submit"] {
+    border: none;
+    outline: none;
+    width: 291px;
+    background-color: var(--main-color);
+    padding: 17px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border-radius: 10px;
+  }

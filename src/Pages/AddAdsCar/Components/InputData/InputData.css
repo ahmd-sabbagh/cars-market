@@ -1,0 +1,12 @@
+.input-data {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .input-data span {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--text-color);
+  }

@@ -1,0 +1,43 @@
+.FilterVendor {
+  position: sticky;
+  top: 125px;
+  right: 0px;
+  height: calc(100vh - 173px);
+  transition: 0.5s;
+}
+.FilterVendor .confirm-filter {
+  min-width: 83px;
+  max-width: 83px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+.FilterVendor .window-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 250px;
+}
+.FilterVendor .window-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.FilterVendor .window-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Mobile */
+@media (max-width: 767px) {
+  .FilterVendor {
+    position: absolute;
+    top: 0;
+    height: calc(100vh - 173px);
+    z-index: 51;
+    right: 12px;
+  }
+  .Vendor[dir="ltr"] .FilterVendor {
+    left: 12px;
+  }
+}
+/* Mobile */

@@ -1,0 +1,65 @@
+.Offers-Window {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100% ;
+  z-index: 20;
+  box-shadow: 0px 8px 12px rgb(0 0 0 / 8%);
+}
+/* Car */
+.Offers-Window .Window .car {
+  border: 1.5px solid #006838;
+  width: 70%;
+}
+.Offers-Window .Window .car div:first-child {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.Offers-Window .Window .car div:last-child {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+/* Window Scroll */
+.Offers-Window .window-scroll {
+  height: 219px;
+  background-color: #00643603;
+  padding: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* width */
+.Offers-Window .window-scroll::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+.Offers-Window .window-scroll::-webkit-scrollbar-track {
+  background: #f7f7f7;
+}
+
+/* Handle */
+.Offers-Window .window-scroll::-webkit-scrollbar-thumb {
+  background: #dfdfdf;
+}
+
+/* Handle on hover */
+.Offers-Window .window-scroll::-webkit-scrollbar-thumb:hover {
+  background: #c1c1c1;
+}
+/* Window Scroll */
+/* Spare */
+.Offers-Window .Window .Spare {
+  border: 1.5px solid #f2c94c;
+  width: 70%;
+}
+/* Spare */
+@media (max-width: 767px) {
+  .Offers-Window .Window .car,
+  .Offers-Window .Window .Spare {
+    width: 90%;
+  }
+}

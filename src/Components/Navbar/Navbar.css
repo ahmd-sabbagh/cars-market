@@ -1,0 +1,120 @@
+/* Logo Image */
+.navbar-main .logo-image {
+  width: 90px;
+}
+
+@media (min-width: 992px) {
+  .navbar-main .logo-image {
+    width: 130px;
+  }
+}
+
+/* Logo Image */
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 4px var(--main-color);
+}
+
+/* Links */
+.navbar-main ul a {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 4px 24px !important;
+  position: relative;
+  transition: 0.5s;
+  color: var(--main-color);
+}
+
+@media (min-width: 992px) {
+  .navbar-main ul a:hover {
+    font-weight: 700;
+    color: var(--main-color);
+  }
+  .navbar-main ul a.active {
+    /* border: 1px solid var(--main-color);
+    border-radius: 4px; */
+    font-weight: 700;
+    color: var(--green-color) !important;
+  }
+}
+/* contact us */
+.navbar-main .contact-us span:last-child {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+/* user account */
+.userAccount .image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ebeaed;
+  outline: 3px solid #ebeaed;
+}
+.userAccount .image img {
+  height: 32px;
+  width: 32px;
+  object-fit: cover;
+}
+/* user account */
+/* Login Btn */
+.login-language .login {
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 7px;
+  width: 148px;
+  height: 50px;
+}
+
+/* Login Btn */
+
+/* Menu Language */
+.login-language .language {
+  width: 28px;
+}
+
+.login-language .language svg {
+  width: 100%;
+}
+
+.login-language .language-cont .menu {
+  top: 46px;
+  box-shadow: 0px 4px 28px rgb(0 0 0 / 7%);
+}
+
+.App[dir="ltr"] .language-cont .menu {
+  right: 0;
+}
+.App[dir="rtl"] .language-cont .menu {
+  left: 0;
+}
+
+.login-language .language-cont .menu .icon {
+  width: 16px;
+}
+
+.login-language .language-cont .menu .icon svg {
+  width: 100%;
+}
+/* Menu Language */
+@media (min-width: 992px) {
+  .navbar-main {
+    width: 100%;
+    height: 69px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-main {
+    width: 100%;
+    height: 56px;
+  }
+}
+.navbar-main .nav-position {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px -8px 20px 0px #5a5a5a;
+  z-index: 100;
+}

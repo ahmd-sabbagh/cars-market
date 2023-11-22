@@ -1,0 +1,50 @@
+.checkboxes-register label {
+  border: 1px solid #cccccc;
+  padding: 8px 24px;
+  border-radius: 16px;
+  width: 120px;
+  text-align: center;
+}
+.checkboxes-register label:has(input[type="checkbox"]:checked) {
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+}
+.RegisterData .css-v68sna-control ,
+.RegisterData .css-blhudp-control{
+    background: #F2F4F7 !important;
+    border: none !important;
+
+}
+/* Upload Image */
+.UploadImage label {
+  background-color: #F2F4F7;
+}
+.UploadImage label .icon {
+  font-size: 25px;
+  color: var(--green-color);
+}
+.UploadImage label p {
+  max-width: 274px;
+}
+.UploadImage label p span {
+  font-weight: 700;
+  color: var(--main-color);
+}
+/* Upload Image */
+.RegisterData .bg{
+  background-color: #F2F4F7;
+}
+/* map */
+.done-map .text{
+  background-color: #00683859;
+  color: white !important;
+  box-shadow: 0 0 1px 4px #0b814a;
+}
+.done-map .icon{
+  background-color: #00683859;
+  box-shadow: 0 0 1px 4px #0b814a;
+}
+.done-map .icon svg path{
+fill: white;
+}

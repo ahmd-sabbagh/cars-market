@@ -1,0 +1,17 @@
+.Subscriptions .Card {
+  flex-basis: 250px;
+  flex-grow: 1;
+  transition: 0.5s;
+}
+.Subscriptions .Card .desc {
+  min-height: 200px;
+}
+.Subscriptions .Card.hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.Subscriptions .Card.active {
+  background-color: var(--main-color);
+  color: white;
+  transform: translateY(-10px);
+}

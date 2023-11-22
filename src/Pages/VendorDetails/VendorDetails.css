@@ -1,0 +1,15 @@
+.VendorDetails {
+  background: #f7f7f7;
+}
+.VendorDetails .TopHead .image {
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+}
+/* Media */
+@media (max-width: 767px) {
+  .VendorDetails .TopHead .image {
+    width: 100px;
+    height: 100px;
+  }
+}

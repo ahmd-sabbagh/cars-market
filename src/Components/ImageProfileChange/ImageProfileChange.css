@@ -1,0 +1,28 @@
+/* My Profile Image */
+.head-profile-image .image {
+    min-width: 100px;
+    max-width: 100px;
+    height: 100px;
+    background-color: #ededf1;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(0 0 0 / 4%);
+  }
+  .head-profile-image .image img {
+    height: 100%;
+  }
+  .head-profile-image .select-image label {
+    background-color: var(--main-color);
+    color: white;
+    max-width: 130px;
+    font-size: 12px;
+  }
+  .head-profile-image .select-image p {
+    font-size: 12px;
+    color: var(--main-color);
+  }
+  .lin {
+    flex: 1;
+    height: 1px;
+    background-color: #bebebe;
+  }
+  /* My Profile Image */

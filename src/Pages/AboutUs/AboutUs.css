@@ -1,0 +1,48 @@
+.AboutUs {
+  padding: 70px 0 0;
+}
+.AboutUs .baner-image {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 11px;
+}
+.AboutUs .description p {
+  line-height: 150%;
+  color: #0e0614;
+}
+.AboutUs .bottom {
+  background-color: #fafafc;
+  padding: 71px 0;
+  margin-top: 112px;
+}
+
+.AboutUs .bottom p {
+  color: #6a6a6a;
+  max-width: 571px;
+}
+/* card */
+.AboutUs .bottom .Card {
+  border-radius: 4px;
+  background: rgba(89, 99, 175, 0.09);
+  transition: 0.3s;
+}
+.AboutUs .bottom .Card:hover {
+  box-shadow: 0 0 20px #00000014;
+  transform: translateY(-10px);
+}
+.AboutUs .bottom .Card .image {
+  height: 255px;
+  border-radius: 4px 4px 0px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.AboutUs .bottom .Card .text {
+  padding: 31px 24px 45px;
+}
+.AboutUs .bottom .Card p {
+  margin-top: 14px;
+}
+/* card */

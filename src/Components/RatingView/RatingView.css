@@ -1,0 +1,6 @@
+.RatingView {
+  height: 26px;
+}
+.RatingView .RatingViewStar {
+  width: 25px;
+}

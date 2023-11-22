@@ -1,0 +1,37 @@
+.ContactUs {
+  background: #fff;
+}
+.ContactUs .head p {
+  max-width: 409px;
+}
+.ContactUs input,
+.ContactUs textarea {
+  border: none !important;
+  background-color: #f2f4f7;
+}
+/* window */
+.ContactUs .window .hover:nth-child(2) .icon {
+  background: #fff;
+}
+.ContactUs .window .icon {
+  min-width: 80px;
+  max-width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #08142033;
+  font-size: 35px;
+}
+.ContactUs .window svg {
+  fill: white;
+}
+.ContactUs .window h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+.ContactUs .window p {
+  color: #abafc7;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+}

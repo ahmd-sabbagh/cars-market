@@ -1,0 +1,23 @@
+.SimilarAds .MainAd {
+  border: 0.5px solid #dedede !important;
+}
+.SimilarAds .MainAd .text .top h3 {
+  font-size: 12px !important;
+}
+.SimilarAds .MainAd .text .bottom span {
+  font-size: 10px !important;
+}
+.SimilarAds .MainAd .text .bottom {
+  gap: 4px !important;
+}
+.SimilarAds .MainAd .image {
+  min-width: 130px !important;
+  max-width: 130px !important;
+  height: auto !important;
+}
+.App[dir="rtl"] .SimilarAds .MainAd .image {
+  border-radius: 7px 0 0 7px;
+}
+.App[dir="ltr"] .SimilarAds .MainAd .image {
+  border-radius: 0 7px 7px 0;
+}

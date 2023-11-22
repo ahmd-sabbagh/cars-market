@@ -1,0 +1,27 @@
+.OtherAds .MainAd {
+  flex-direction: row-reverse;
+  justify-content: start !important;
+  border-radius: 8px;
+  border: 0.7px solid var(--acacac, #acacac);
+}
+@media (max-width: 767px) {
+  .VendorDetails .btn-blue {
+    width: 100% !important;
+  }
+  .OtherAds .MainAd {
+    border: 0.5px solid #dedede !important;
+  }
+  .OtherAds .MainAd .text .top h3 {
+    font-size: 12px !important;
+  }
+  .OtherAds .MainAd .text .bottom span {
+    font-size: 10px !important;
+  }
+  .OtherAds .MainAd .text .bottom {
+    gap: 4px !important;
+  }
+  .OtherAds .MainAd .image {
+    width: 130px !important;
+    height: auto !important;
+  }
+}

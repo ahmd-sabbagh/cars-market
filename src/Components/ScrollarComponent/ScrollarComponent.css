@@ -1,0 +1,7 @@
+.ScrollarComponent {
+  overflow-y: scroll;
+  transition: 0.5s;
+}
+.ScrollarComponent::-webkit-scrollbar {
+  display: none;
+}

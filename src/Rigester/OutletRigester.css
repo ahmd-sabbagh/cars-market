@@ -1,0 +1,58 @@
+.OutletRigester {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+/* Sign Up */
+.form-cont p {
+  font-weight: 500;
+  line-height: 24px;
+  color: #6a6a6a;
+}
+.SignUp {
+  transform: scale(0.9);
+}
+.SignUp .typs button {
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #f2f4f7;
+  color: #667085;
+  transition: 0.2s;
+}
+.SignUp .typs button:hover {
+  background-color: #f2c94c7a;
+}
+.SignUp .typs button.active {
+  background-color: #f2c94c;
+  color: white;
+}
+.Siform-contgnUp .no-have span {
+  color: #667085;
+  font-size: 18px;
+  font-weight: 400;
+}
+.form-cont .no-have a {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+/* Sign Up */
+/* Login */
+.Login .forgetPass {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #f2c94c;
+}
+/* Login */
+/* Recover */
+.RecoverPassword p {
+  text-align: center;
+  max-width: 342px;
+}
+/* Recover */
+/* NewPassword */
+.NewPassword p {
+  max-width: 302px;
+  text-align: center;
+}
+/* NewPassword */

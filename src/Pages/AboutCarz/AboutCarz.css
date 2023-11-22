@@ -1,0 +1,46 @@
+.AboutCarz h3 {
+  max-width: 913px;
+  font-size: 38px;
+  font-weight: 700;
+}
+/* Section */
+.AboutCarz .SectionAboutCarz {
+  margin-top: 100px;
+}
+.AboutCarz .SectionAboutCarz .image {
+  height: 486px;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.AboutCarz .SectionAboutCarz .text p {
+  color: #6a6a6a;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 130%;
+}
+.AboutCarz .SectionAboutCarz .text button {
+  width: 239px;
+  height: 68px;
+  border-radius: 6px;
+  background: #1b2469;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  border: none;
+}
+/* Section */
+@media (max-width: 767px) {
+  .AboutCarz h3 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .AboutCarz .SectionAboutCarz .text p {
+    font-size: 20px;
+  }
+  .AboutCarz .SectionAboutCarz .text h4,
+  .AboutCarz .SectionAboutCarz .text p {
+    text-align: center;
+  }
+}

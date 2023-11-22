@@ -1,0 +1,42 @@
+.AdsDetails .Image .image {
+  height: 279px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.AdsDetails .Image .footer {
+  background-color: #f2c94c;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--text-color);
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.AdsDetails .Image .footer .detail {
+  border-color: #856e2a !important;
+}
+.title-dev {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.title-popup {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+@media (max-width: 767px) {
+  .AdsDetails .Image .footer {
+    font-size: 12px;
+  }
+  .AdsDetails .Image .footer div span:first-child {
+    width: 20px;
+  }
+  .title-dev {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}

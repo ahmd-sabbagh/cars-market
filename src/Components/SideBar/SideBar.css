@@ -1,0 +1,77 @@
+/* Prifile Image */
+.UserProfile-SideBar .ProfileImage::after {
+  content: "";
+  width: 90%;
+  position: absolute;
+  height: 0.5px;
+  background-color: #e7e7e7;
+  bottom: 0px;
+}
+.App[dir="rtl"] .UserProfile-SideBar .ProfileImage::after {
+  right: 0;
+}
+.App[dir="ltr"] .UserProfile-SideBar .ProfileImage::after {
+  left: 0;
+}
+.UserProfile-SideBar .ProfileImage .image {
+  width: 68px;
+  min-width: 68px;
+  height: 68px;
+  background-color: #c7cbd647;
+}
+.UserProfile-SideBar .ProfileImage .email-or-mobile {
+  color: #6a6a6a;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+/* Prifile Image */
+/* Links */
+.UserProfile-SideBar .Links {
+  gap: 12px;
+}
+.UserProfile-SideBar .Links a {
+  padding: 8px 0;
+  transition: 0.3s;
+}
+.UserProfile-SideBar .Links a:hover,
+.UserProfile-SideBar .Links a.active {
+  background-color: rgb(27 36 105 / 2%);
+  border-radius: 2px;
+  transform: translateX(-5px);
+}
+.UserProfile-SideBar .Links a .icon svg path {
+  stroke: #7d7d7d;
+}
+.UserProfile-SideBar .Links a:hover .icon svg path,
+.UserProfile-SideBar .Links a.active .icon svg path {
+  stroke: #f2c94c;
+}
+.UserProfile-SideBar .Links .icon {
+  width: 24px;
+  height: 24px;
+}
+.UserProfile-SideBar .Links a:nth-child(2) .icon {
+  font-size: 20px;
+  color: #f2c94c;
+}
+/* Links */
+/* LogOut */
+.UserProfile-SideBar .log-out::after {
+  content: "";
+  width: 90%;
+  position: absolute;
+  height: 0.5px;
+  background-color: #e7e7e7;
+  top: 0px;
+}
+.App[dir="rtl"] .UserProfile-SideBar .log-out::after,
+.Vendor[dir="rtl"] .UserProfile-SideBar .log-out::after{
+  right: 0;
+}
+.App[dir="ltr"] .UserProfile-SideBar .log-out::after,
+.Vendor[dir="ltr"] .UserProfile-SideBar .log-out::after {
+  left: 0;
+}
+/* LogOut */

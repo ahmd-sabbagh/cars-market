@@ -1,0 +1,11 @@
+.AccountSetting .title p{
+    color: #6A6A6A;
+}
+.AccountSetting .personal-data .name input,
+.AccountSetting .personal-data .lang .select{
+background-color: #F2F4F7;
+}
+.AccountSetting .personal-data .name input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+}

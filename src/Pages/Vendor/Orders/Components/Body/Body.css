@@ -1,0 +1,16 @@
+.BodyOrders .HeaderType .tipe {
+  transition: 0.3s;
+}
+.BodyOrders .HeaderType .tipe:hover {
+  background-color: #fdfdfd;
+}
+.BodyOrders .HeaderType .tipe.active {
+  background-color: #f5f5f5;
+}
+.BodyOrders .HeaderType .line {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  background: var(--main-color);
+  transition: 0.5s;
+}

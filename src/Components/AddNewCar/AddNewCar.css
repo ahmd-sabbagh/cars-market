@@ -1,0 +1,55 @@
+.AddNewCar {
+  background: rgba(30, 27, 27, 0.53);
+  min-height: 100vh;
+  position: fixed;
+  z-index: 1000;
+}
+.AddNewCar .cont {
+    max-width: 682px;
+  border-radius: 13px;
+}
+.AddNewCar .cont .top .text p {
+  max-width: 325px;
+}
+/* bottom */
+.AddNewCar .cont .bottom {
+  margin-top: 41px;
+}
+.AddNewCar .span {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  display: block;
+}
+.AddNewCar input::placeholder{
+  font-size: 14px !important;
+  color: #333333 !important;
+}
+.AddNewCar .cont .bottom .buttons button {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  border-radius: 10px;
+  background-color: var(--main-color) !important;
+  width: 100%;
+  border: none;
+}
+.AddNewCar .photo {
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+}
+.AddNewCar  .hent p{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-color);
+    max-width: 255px;
+}
+@media (max-width:767px) {
+    .AddNewCar .cont{
+        transform: scale(.9);
+    }
+}

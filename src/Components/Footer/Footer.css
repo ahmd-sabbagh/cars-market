@@ -1,0 +1,23 @@
+.Footer {
+  background: #F5F5F5;
+  color: #000;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+.Footer a{
+    font-size: 18px;
+    font-weight: 400;
+    color: #130C04;
+    transition: .3s;
+}
+.Footer a.active,
+.Footer a:hover{
+    font-weight: 700;
+}
+.Footer .footer-footer .text{
+    font-size: 16px;
+    font-weight: 500;
+    color: #70798B;
+}

@@ -1,0 +1,31 @@
+/* Header */
+.UserProfile .Header p {
+  max-width: 533px;
+}
+/* Header */
+.AllCars .CardCar .text h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+/* AllCars */
+.AllCars .CardCar .logo {
+  min-width: 48px;
+  max-width: 48px;
+  height: 48px;
+  border: 0.5px solid whitesmoke;
+  border-radius: 50%;
+}
+.AllCars .CardCar .image {
+  height: 113px;
+}
+/* AllCars */
+/* No Cars */
+.AllCars .NoCars {
+  height: 350px;
+}
+@media (min-width: 768px) {
+  .AllCars .NoCars button {
+    max-width: 352px;
+  }
+}
+/* No Cars */

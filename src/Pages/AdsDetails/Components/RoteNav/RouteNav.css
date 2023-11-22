@@ -1,0 +1,11 @@
+.RoteNav {
+  font-size: 16px;
+  font-weight: 500;
+}
+.RoteNav a {
+  color: var(--text-color);
+}
+
+.RoteNav span {
+  color: #6a6a6a;
+}

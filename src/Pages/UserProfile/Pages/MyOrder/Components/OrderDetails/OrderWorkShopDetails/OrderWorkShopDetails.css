@@ -1,0 +1,10 @@
+.OrderWorkShopDetails .Clarifications .cont {
+  max-width: 400px;
+}
+.OrderWorkShopDetails .Clarifications .cont p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #080a1f;
+}

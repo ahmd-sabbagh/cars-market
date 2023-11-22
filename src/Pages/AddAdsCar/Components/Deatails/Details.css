@@ -1,0 +1,42 @@
+.input-data {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.input-data span {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-color);
+}
+.input-data input,
+.input-data textarea {
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+}
+.input-data input::placeholder,
+.input-data textarea::placeholder {
+  font-size: 15px !important;
+}
+/* General */
+.AddAdsCar .Deatails .adress p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: #acacac;
+  max-width: 263px;
+}
+/* Car Details */
+.AddAdsCar .Deatails .Clarifications>span{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-color);
+}
+.AddAdsCar .Deatails .Clarifications textarea::placeholder {
+  font-size: 15px !important;
+}

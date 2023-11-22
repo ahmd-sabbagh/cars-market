@@ -1,0 +1,44 @@
+.AddCar {
+  background: rgba(30, 27, 27, 0.53);
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+}
+.AddCar .cont {
+  border-radius: 13px;
+}
+.AddCar .cont .top .text p {
+  max-width: 325px;
+}
+/* bottom */
+.AddCar .cont .bottom {
+  margin-top: 41px;
+}
+.AddCar .cont .bottom .label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 12px;
+}
+.AddCar .cont .bottom .buttons button {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.AddCar .cont .bottom .buttons button:first-child {
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  border: none;
+}
+.AddCar .cont .bottom .buttons button:last-child {
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}

@@ -1,0 +1,33 @@
+/* Customer Rating */
+.CustomerRating .Customer {
+    max-width: 486px;
+  }
+ .CustomerRating .Customer .info .image {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+  }
+.CustomerRating .Customer .info .name {
+    font-size: 12px;
+    font-weight: 500;
+  }
+.CustomerRating .Customer .info .date {
+    font-size: 10px;
+    font-weight: 400;
+    color: #6c6c6c;
+  }
+.CustomerRating .Customer .RatingView {
+    height: 15px !important;
+  }
+.CustomerRating .Customer .RatingView .RatingViewStar {
+    width: 16px !important;
+  }
+.CustomerRating .Customer p {
+    max-width: 361px;
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 400;
+  }
+.CustomerRating .view-all button{
+      color: #F2C94C;
+  }

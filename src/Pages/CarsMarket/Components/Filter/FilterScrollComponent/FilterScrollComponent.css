@@ -1,0 +1,32 @@
+.FilterScrollComponent .nav span:first-child {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.FilterScrollComponent .nav .icon {
+  font-size: 23px;
+}
+.FilterScrollComponent .cont .scroll-component {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 194px;
+}
+/* width */
+.FilterScrollComponent .cont .scroll-component::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+.FilterScrollComponent .cont .scroll-component::-webkit-scrollbar-track {
+  background: #f7f7f7;
+}
+
+/* Handle */
+.FilterScrollComponent .cont .scroll-component::-webkit-scrollbar-thumb {
+  background: #dfdfdf;
+}
+
+/* Handle on hover */
+.FilterScrollComponent .cont .scroll-component::-webkit-scrollbar-thumb:hover {
+  background: #c1c1c1;
+}

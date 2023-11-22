@@ -1,0 +1,6 @@
+.App[dir="ltr"] .DotsMenu .DotsMenu-menue {
+  right: 0;
+}
+.App[dir="rtl"] .DotsMenu .DotsMenu-menue {
+  left: 0;
+}

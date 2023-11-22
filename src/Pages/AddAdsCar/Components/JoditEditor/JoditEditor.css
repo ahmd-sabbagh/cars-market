@@ -1,0 +1,7 @@
+.JoditEditor .jodit-status-bar a {
+  display: none !important;
+}
+.JoditEditor > span {
+  font-size: 18px;
+  font-weight: 600;
+}

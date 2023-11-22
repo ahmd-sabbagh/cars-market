@@ -1,0 +1,19 @@
+.head-message .image {
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+}
+.head-message .DotsMenu-menue {
+  width: 130px;
+}
+.head-message .DotsMenu-menue a,
+.head-message .DotsMenu-menue div{
+color: var(--text-color);
+font-size: 14px;
+}
+.Vendor[dir="ltr"] .head-message .DotsMenu-menue {
+  right: 0;
+}
+.Vendor[dir="rtl"] .head-message .DotsMenu-menue {
+  left: 0;
+}

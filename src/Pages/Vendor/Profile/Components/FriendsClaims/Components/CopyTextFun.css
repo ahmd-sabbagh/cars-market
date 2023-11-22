@@ -1,0 +1,22 @@
+.CopyTextFun-Cont > span {
+  color: #080a1f;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.CopyTextFun {
+  border-radius: 6px;
+  background: #f7f7f7;
+  padding: 18px 26px;
+}
+.CopyTextFun input {
+  background-color: transparent;
+  border: none;
+}
+.CopyTextFun button {
+  border: none;
+  background: transparent;
+}
+.CopyTextFun.done {
+  box-shadow: 0 0 1px 2px #2792c9;
+}

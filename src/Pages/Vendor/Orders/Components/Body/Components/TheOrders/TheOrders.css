@@ -1,0 +1,117 @@
+/* SparesCard */
+.cards .SparesCard:not(:last-child),
+.cards .MaintenanceServicesCard:not(:last-child),
+.FlatniessCard:not(:last-child) {
+  border-bottom: 1px solid #acacac70;
+}
+.SparesCard .logo {
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  outline: 1px solid #6a6a6a;
+  border-radius: 50%;
+}
+.SparesCard:hover {
+  transition: 0.5s;
+}
+.SparesCard:hover {
+  background-color: #acacac17;
+  transform: scale(1.03);
+}
+/* SparesCard */
+.SpareCard button[type="submit"] {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  padding: 2px 15px;
+  border-radius: 8px;
+}
+.SpareCard-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 194px;
+}
+.Vendor[dir="ltr"] .SpareCard-container {
+  padding-right: 10px;
+}
+.Vendor[dir="rtl"] .SpareCard-container {
+  padding-left: 10px;
+}
+/* width */
+.SpareCard-container::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+.SpareCard-container::-webkit-scrollbar-track {
+  background: #f7f7f7;
+}
+
+/* Handle */
+.SpareCard-container::-webkit-scrollbar-thumb {
+  background: #dfdfdf;
+}
+
+/* Handle on hover */
+.SpareCard-container::-webkit-scrollbar-thumb:hover {
+  background: #c1c1c1;
+}
+/* MaintenanceServicesCard */
+.MaintenanceServicesCard {
+  transition: 0.5s;
+}
+.MaintenanceServicesCard h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #6a6a6a;
+}
+.MaintenanceServicesCard p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6a6a6a;
+}
+.MaintenanceServicesCard:hover {
+  background-color: #acacac17;
+  transform: scale(1.03);
+}
+.MaintenanceServices-details-cont button[type="submit"] {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  padding: 2px 15px;
+  border-radius: 8px;
+}
+/* MaintenanceServicesCard */
+/* FlatniessCard */
+.FlatniessCard p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6a6a6a;
+}
+.FlatniessCard {
+  transition: 0.5s;
+}
+.FlatniessCard:hover {
+  background-color: #acacac17;
+  transform: scale(1.03);
+}
+.FlatniessCard-details div {
+  gap: 3px;
+}
+.FlatniessCard-details div span {
+  font-size: 14px;
+}
+.FlatniessCard-details div span:first-child {
+  color: #6a6a6a;
+}
+.FlatniessCard-details div span:last-child {
+  color: var(--text-color);
+}
+.FlatniessCard-details button[type="submit"] {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  padding: 2px 15px;
+  border-radius: 8px;
+}
+/* FlatniessCard */
+.icon-close {
+  min-width: 20px;
+}

@@ -1,0 +1,23 @@
+/* CompanyLogos */
+.CompanyLogos {
+  padding: 122px 0;
+}
+.CompanyLogos .logo {
+  min-width: 210.71px;
+  max-width: 210.71px;
+  height: 46px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+@media (max-width: 767px) {
+  .CompanyLogos {
+    padding: 48px 0;
+  }
+  .CompanyLogos .logo {
+    min-width: 150.71px;
+    max-width: 150.71px;
+  }
+}
+/* CompanyLogos */

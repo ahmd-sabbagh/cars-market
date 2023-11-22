@@ -1,0 +1,26 @@
+.MenueUser {
+  top: calc(100% + 10px);
+  left: 0;
+  background-color: white;
+  width: 160px;
+  box-shadow: 0px 4px 28px rgb(0 0 0 / 7%);
+  width: 190px;
+}
+.MenueUser a {
+  font-size: 14px;
+  font-weight: 500;
+}
+.MenueUser a:hover {
+  background-color: #fdfdfd;
+}
+.App[dir="ltr"] .MenueUser .arrow,
+.App[dir="ltr"] .MenueUser .arrow-icon {
+  transform: rotate(180deg);
+}
+/* return-user */
+.MenueUser .return-user {
+  padding: 8px 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* return-user */

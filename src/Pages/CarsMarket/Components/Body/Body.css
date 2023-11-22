@@ -1,0 +1,51 @@
+/* Header */
+.CarsMarket .Body .Header input[type="search"]::placeholder {
+  font-size: 12px;
+  color: #acacac;
+  font-weight: 400;
+}
+.CarsMarket .Body .Header a {
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.CarsMarket .Body .Header a.yellow {
+  background: #f2c94c;
+}
+@media (min-width: 992px) {
+  .CarsMarket .Body .Header a.yellow {
+    width: 211px;
+  }
+}
+/* HeaderFilter */
+.HeaderFilter .icon {
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.HeaderFilter .departs button {
+  border: 1.5px solid white;
+  padding: 10px 24px;
+  border-radius: 90px;
+  background-color: white;
+  color: #686868;
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.HeaderFilter .departs button:hover,
+.HeaderFilter .departs button.hover{
+  border-color: #f2c94c !important;
+}
+@media (max-width: 567px) {
+  .CarsMarket .Body .Header a{
+    flex-grow: 1;
+    padding: 14px 16px;
+  }
+  .HeaderFilter .departs button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
