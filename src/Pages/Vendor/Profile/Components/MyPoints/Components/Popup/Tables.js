@@ -35,24 +35,26 @@ function Tables() {
     getPoints();
   }, []);
   return (
-    <table className="table table-bordered">
-      <tbody>
-        {loader ? (
-          <div className="flex-c bg-white r-07" style={{ height: "300px" }}>
-            <Loader width={"150px"} />
-          </div>
-        ) : (
-          data.map((item, idx) => (
-            <tr className="d-flex" key={idx}>
-              <td className="full-width py-3">{item.title}</td>
-              <td className="full-width py-3">{`${item.points} ${trans(
-                "vendor.my_points.point"
-              )}`}</td>
-            </tr>
-          ))
-        )}
-      </tbody>
-    </table>
+    <>
+      {loader ? (
+        <div className="flex-c bg-white r-07" style={{ height: "300px" }}>
+          <Loader width={"150px"} />
+        </div>
+      ) : (
+        <table className="table table-bordered">
+          <tbody>
+            {data.map((item, idx) => (
+              <tr className="d-flex" key={idx}>
+                <td className="full-width py-3">{item.title}</td>
+                <td className="full-width py-3">{`${item.points} ${trans(
+                  "vendor.my_points.point"
+                )}`}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </>
   );
 }
 

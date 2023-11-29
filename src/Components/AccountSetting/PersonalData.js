@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
-import { useRecoilState } from "recoil";
-import { LoaderState } from "../../Recoil/All/Loader";
 import { basedDomin } from "../../Api/basedDomin";
 import { ErrorComponent, SuccsesComponent } from "../../Others/Error";
 import { trans } from "../Navbar/Navbar";
 import ImageProfileChange from "../ImageProfileChange/ImageProfileChange";
-function PersonalData() {
+function PersonalData({ setLoader }) {
   const user = JSON.parse(localStorage.getItem("user"));
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const [errorValidation, setErrorValidation] = useState({});
-  const [loader, setLoader] = useRecoilState(LoaderState);
   const [image, setImage] = useState("");
   const [active, setActive] = useState(false);
   const [name, setName] = useState("");
@@ -41,6 +37,8 @@ function PersonalData() {
       );
       SuccsesComponent(data.message);
       setLoader(false);
+      localStorage.setItem("user", JSON.stringify(data.data));
+      setActive(false);
     } catch (error) {
       ErrorComponent(error, navigate, setErrorValidation);
       setActive(false);

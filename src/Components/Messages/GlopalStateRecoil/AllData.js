@@ -14,3 +14,10 @@ export const messagesChanged = atom({
   key: "messagesChanged",
   default: [],
 });
+
+// Change Status For Blocked User
+
+export const blockedUserChangeStatusVendor = atom({
+  key: "blockedUserChangeStatusVendor",
+  default: false,
+});

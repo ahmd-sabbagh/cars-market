@@ -1,0 +1,6 @@
+.AgreementProcess .hent {
+  padding: 16px;
+  border-radius: 8px;
+  background: rgb(27 36 105 / 10%);
+  color: var(--text-color);
+}

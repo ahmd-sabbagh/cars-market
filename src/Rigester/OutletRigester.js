@@ -8,7 +8,7 @@ function OutletRigester() {
   return (
     <div
       className="OutletRigester flex-c"
-      dir={language === "ar" ? "rtl" : "ltr"}
+      dir={language === "en" ? "ltr" : "rtl"}
     >
       <div className="container flex-c">
         <Outlet />

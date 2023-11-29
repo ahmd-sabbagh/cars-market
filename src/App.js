@@ -54,7 +54,7 @@ function App() {
       <div
         className="App position-relative"
         style={{ minHeight: "100vh" }}
-        dir={language === "ar" ? "rtl" : "ltr"}
+        dir={language === "en" ? "ltr" : "rtl"}
       >
         <ScrollToTop />
         <Navbar />

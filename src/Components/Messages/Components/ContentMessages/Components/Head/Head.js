@@ -1,14 +1,54 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Head.css";
 import { CiMenuFries } from "react-icons/ci";
 import { useRecoilState } from "recoil";
-import { openListUserMessages } from "../../../../GlopalStateRecoil/AllData";
+import { blockedUserChangeStatusVendor, openListUserMessages } from "../../../../GlopalStateRecoil/AllData";
 import { trans } from "../../../../../Navbar/Navbar";
 import DotsMenu from "../../../../../DotsMenu/DotsMenu";
+import axios from "axios";
+import { basedDomin } from "../../../../../../Api/basedDomin";
+import {
+  ErrorComponent,
+  SuccsesComponent,
+} from "../../../../../../Others/Error";
+import { vendorMainLoader } from "../../../../../../Pages/Vendor/GlopalStateRecoil/AllData";
 
-function Head({image,name}) {
+function Head({ image, name, id }) {
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
   const [open, setOpen] = useRecoilState(openListUserMessages);
+  const [loader, setLoader] = useRecoilState(vendorMainLoader);
+  // State Filter User Blocked
+  const [filterBlockedList, setFilterBlockedList] = useRecoilState(
+    blockedUserChangeStatusVendor
+  );
+  // State Filter User Blocked
+  // Block User
+  const blockUser = () => {
+    setLoader(true);
+    axios
+      .post(
+        `${basedDomin}/public/block/create`,
+        { user_id: id },
+        {
+          headers: {
+            Accept: "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      .then(({ data }) => {
+        SuccsesComponent(data.message);
+        setFilterBlockedList(!filterBlockedList)
+        setLoader(false);
+        console.log(data);
+      })
+      .catch((error) => {
+        ErrorComponent(error, navigate);
+        setLoader(false);
+      });
+  };
+  // Block User
   return (
     <div className="head-message d-flex gap-4 justify-content-between border-bottom p-3">
       <div className="d-flex align-items-center gap-2">
@@ -38,8 +78,13 @@ function Head({image,name}) {
       <div className="ctr d-flex align-items-center gap-2">
         <DotsMenu>
           <div className="d-flex flex-column gap-2 chat-menu p-2">
-            <div className="li pointer">
-              {trans("requestes_message.block_vendor")}
+            <div
+              className="li pointer"
+              onClick={() => {
+                blockUser();
+              }}
+            >
+              {trans("service_provider.block_buyer")}
             </div>
           </div>
         </DotsMenu>

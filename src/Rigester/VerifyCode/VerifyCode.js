@@ -10,6 +10,7 @@ import { ErrorComponent, SuccsesComponent } from "../../Others/Error";
 import { useRecoilValue } from "recoil";
 import { RegisterTypeUser } from "../GlopalRecoilState/AllData";
 function VerifyCode() {
+  const language = localStorage.getItem("i18nextLng");
   const user = JSON.parse(localStorage.getItem("user"));
   const token = localStorage.getItem("token");
   const navigat = useNavigate();
@@ -80,7 +81,7 @@ function VerifyCode() {
   };
   // function Submit
   return (
-    <div className="SendCode form-cont bg-white py-4 py-md-5 px-3 px-md-5 d-flex flex-column gap-4 align-items-center">
+    <div className="SendCode form-cont bg-white py-4 py-md-5 px-3 px-md-5 d-flex flex-column gap-4 align-items-center" dir={language === "en" ? "ltr" : "rtl"}>
       <div className="logo">
         <Shape />
       </div>

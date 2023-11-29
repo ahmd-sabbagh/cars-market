@@ -1,0 +1,28 @@
+.RequestesMessages>.head p {
+max-width: 481px;
+}
+/* Side List */
+.App[dir="ltr"] .Messages .list-side {
+  left: -370px;
+}
+.App[dir="rtl"] .Messages .list-side {
+  right: -370px;
+}
+.App[dir="ltr"] .Messages .list-side.direct {
+  left: 0;
+}
+.App[dir="rtl"] .Messages .list-side.direct {
+  right: 0;
+}
+/* ScrollComponent */
+/* Side List */
+/* Footer */
+.RequestesMessages .Messages .send-message {
+  box-shadow:none !important;
+}
+/* Footer */
+/* Content Message */
+.ContentMessages .message-text .cont::-webkit-scrollbar {
+  display: none;
+}
+/* Content Message */

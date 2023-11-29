@@ -8,6 +8,7 @@ import { ReactComponent as Order } from "./Assets/duplicate.svg";
 import { ReactComponent as Requistes } from "./Assets/chat-alt-2.svg";
 import { ReactComponent as MyAds } from "./Assets/document-duplicate.svg";
 import { ReactComponent as Message } from "./Assets/chat-alt.svg";
+import { ReactComponent as Blocked } from "./Assets/minus-circle.svg";
 import { trans } from "../../Components/Navbar/Navbar";
 
 function UserProfile() {
@@ -42,9 +43,14 @@ function UserProfile() {
       text: trans("user_profile.message"),
       to: "harag-message",
     },
+    {
+      icon: <Blocked />,
+      text: trans("vendor.sidebar.blocked_list"),
+      to: "blocked",
+    },
   ];
   return (
-    <div className="UserProfile py-5">
+    <div className="UserProfile py-4 py-md-5">
       <div className="container">
         <div className="row g-4">
           <div className="col-lg-3">

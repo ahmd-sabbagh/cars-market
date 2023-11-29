@@ -450,6 +450,7 @@
     "all_view": "عرض الكل",
     "add_rate": "اضافة تقييم",
     "block": "حظر البائع",
+    "block_buyer": "حظر المشتري",
     "send_message": "ارسال رسالة جديدة"
   },
   "rating_vendor": {
@@ -489,6 +490,7 @@
     "confirm": "موافق",
     "heddin_spare": "تم الاتفاق واختفاء القطع عن باقي البائعين",
     "done_buy": "تم الشراء",
+    "cancel_buy":"الغاء الاتفاق",
     "done_buy_reseved": "تم الشراء والاستلام",
     "click_here": "اضغط هنا لتأكيد الشراء",
     "sure": "تأكيد",
@@ -498,7 +500,8 @@
     "back": "العودة للرئيسية",
     "spare": "قطع غيار",
     "workshop": "ورشة صيانة",
-    "sotha": "سطحة"
+    "sotha": "سطحة",
+    "done_deal_message":"لا يمكنك ارسال رسالة الى طلب تم الاتفاق عليه"
   },
   "vendor": {
     "register": {
@@ -612,6 +615,13 @@
   "return_buyer": "الانتقال الى المشتري",
   "file": "صورة",
   "record": "ملف صوتي",
-  "note":"ملاحظات",
-  "no_note":"لا يوجد ملاحظات"
+  "note": "ملاحظات",
+  "no_note": "لا يوجد ملاحظات",
+  "points": {
+    "point_service_spare_parts": "اتمام خدمة قطع غيار",
+    "point_service_maintenance_services": "اتمام خدمة صيانة",
+    "point_service_flatness": "اتمام خدمة سطحة",
+    "point_invitation_code": "دعوة للتطبيق"
+  },
+  "not_transaction":"لا توجد معاملات"
 }

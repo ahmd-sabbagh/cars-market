@@ -15,7 +15,7 @@ import axios from "axios";
 import { basedDomin } from "../../../Api/basedDomin";
 import { ErrorComponent, SuccsesComponent } from "../../../Others/Error";
 
-function RegisterData() {
+function RegisterData({setUser}) {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const [viewMap, setViewMap] = useState(false);
@@ -132,7 +132,6 @@ function RegisterData() {
   const submit = async (e) => {
     setLoader(true);
     e.preventDefault();
-    console.log(formData);
     try {
       const { data } = await axios.post(
         `${basedDomin}/vendor/register-data`,
@@ -147,7 +146,8 @@ function RegisterData() {
       );
       SuccsesComponent(data.message);
       setLoader(false);
-      console.log(data);
+      localStorage.setItem("user", JSON.stringify(data.data));
+      setUser(data.data)
     } catch (error) {
       ErrorComponent(error, navigate, setErrorValidation);
       setActive(false);

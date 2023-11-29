@@ -21,7 +21,7 @@ function AllCars() {
   useEffect(() => {
     getCarFunction(setCarsOption, setExist, setLoader, navigate);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [newCarStatus]);
+  }, [newCarStatus, carsOption]);
   // Get Cars
   return (
     <div className="AllCars bg-white mt-32 p-2 p-md-4 r-05">

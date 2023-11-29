@@ -461,7 +461,7 @@ textarea::placeholder {
 .AllPageMessage .cont {
   display: flex;
   position: relative;
-  height: 767px;
+  height: 478px;
   max-height: fit-content;
 }
 .AllPageMessage .image {

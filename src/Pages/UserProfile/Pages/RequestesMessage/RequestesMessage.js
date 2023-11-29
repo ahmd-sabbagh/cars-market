@@ -36,7 +36,7 @@ function RequestesMessage() {
     } else {
       updatedList.splice(spare.indexOf(event.target.value), 1);
     }
-    setSpare(updatedList); 
+    setSpare(updatedList);
   };
   // spare parts
   return (
@@ -298,7 +298,7 @@ function RequestesMessage() {
                         className="btn-blue full-width"
                         onClick={() => {
                           if (spare.length) {
-                            setDoneDeal(true);
+                            setDoneSelect(true);
                           } else {
                             setDoneDeal(false);
                           }

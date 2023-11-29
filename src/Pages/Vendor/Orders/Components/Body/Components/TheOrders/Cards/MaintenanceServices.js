@@ -7,7 +7,8 @@ import InputOrderSent from "../../InputOrderSent/InputOrderSent";
 import { useRecoilState } from "recoil";
 import { WindowChangeView } from "../../../GlopalStateRecoil/AllData";
 import { changeUserId } from "../../../../../../../../Components/Messages/GlopalStateRecoil/AllData";
-
+import moment from "moment";
+import "moment/locale/ar";
 function MaintenanceServices({ data }) {
   // Type Window
   const [window, setWindow] = useRecoilState(WindowChangeView);
@@ -22,6 +23,14 @@ function MaintenanceServices({ data }) {
     state: price,
     setState: setPrice,
   };
+  // Moment
+  var timeago;
+  if (localStorage.getItem("i18nextLng") === "ar") {
+    timeago = moment(data.created_at).locale("ar").format("h:mm a");
+  } else {
+    timeago = moment(data.created_at).locale("en").format("h:mm a");
+  }
+  // Moment
   return (
     <>
       {/* <RunOutOfAttempts /> */}
@@ -58,20 +67,23 @@ function MaintenanceServices({ data }) {
         className="MaintenanceServicesCard py-3 pointer px-3 px-md-4"
         onClick={() => {
           // setOpen(true);
-          setUserChat(data.id)
+          setUserChat(data.id);
           setWindow("myOffers");
         }}
       >
-        <h3>
-          {data.details.electrical
-            ? trans("order_workshop.electrical")
-            : data.details.mechanical
-            ? trans("order_workshop.mechanical")
-            : trans("order_workshop.plumber")}
-        </h3>
+        <div className="d-flex justify-content-between">
+          <h3 className="fs-20-400">
+            {data.details.electrical
+              ? trans("order_workshop.electrical")
+              : data.details.mechanical
+              ? trans("order_workshop.mechanical")
+              : trans("order_workshop.plumber")}
+          </h3>
+          <p className="fs-16-400">{timeago}</p>
+        </div>
         <p className="mt-2">
           {`${
-            data?.details?.note.length > 100
+            data?.details?.note?.length > 100
               ? `${data.details.note.substring(0, 100)}...`
               : data.details.note
           }`}

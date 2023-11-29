@@ -16,7 +16,7 @@ function OtherImages() {
           <div
             className="img bg-image r-10"
             key={idx}
-            style={{ backgroundImage: `url(${img})` }}
+            style={{ backgroundImage: `url(${img})`}}
           ></div>
         ))}
       </div>

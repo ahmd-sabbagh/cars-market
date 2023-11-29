@@ -449,6 +449,7 @@
     "all_view": "View All",
     "add_rate": "Add Rating",
     "block": "Block Seller",
+    "block_buyer": "Block the Buyer",
     "send_message": "Send New Message"
   },
   "rating_vendor": {
@@ -488,6 +489,7 @@
     "confirm": "Confirm",
     "heddin_spare": "Agreement reached, and the parts are hidden from other sellers.",
     "done_buy": "Purchase completed",
+    "cancel_buy": "Cancel",
     "done_buy_reseved": "Purchase and pick-up completed",
     "click_here": "Click here to confirm the purchase",
     "sure": "Confirm",
@@ -497,7 +499,8 @@
     "back": "Back to Homepage",
     "spare": "Spare Parts",
     "workshop": "Maintenance Workshop",
-    "sotha": "Towing Service"
+    "sotha": "Towing Service",
+    "done_deal_message": "You cannot send a message to an agreed order"
   },
   "vendor": {
     "register": {
@@ -612,5 +615,12 @@
   "file": "Image",
   "record": "Audio File",
   "note": "Notes",
-  "no_note": "No notes available"
+  "no_note": "No notes available",
+  "points": {
+    "point_service_spare_parts": "Completing spare parts service",
+    "point_service_maintenance_services": "Completing maintenance service",
+    "point_service_flatness": "Completing towing service",
+    "point_invitation_code": "Invitation to the application"
+  },
+  "not_transaction": "No transactions"
 }

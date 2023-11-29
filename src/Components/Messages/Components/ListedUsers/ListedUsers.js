@@ -4,8 +4,11 @@ import ScrollarComponent from "../../../ScrollarComponent/ScrollarComponent";
 import { trans } from "../../../Navbar/Navbar";
 import User from "./Components/User";
 import { IoClose } from "react-icons/io5";
-import { openListUserMessages } from "../../GlopalStateRecoil/AllData";
-import { useRecoilState } from "recoil";
+import {
+  blockedUserChangeStatusVendor,
+  openListUserMessages,
+} from "../../GlopalStateRecoil/AllData";
+import { useRecoilState, useRecoilValue } from "recoil";
 import NotUser from "./Components/NotUser/NotUser";
 import axios from "axios";
 import { basedDomin } from "../../../../Api/basedDomin";
@@ -23,6 +26,9 @@ function ListedUsers() {
   const [exist, setExist] = useState(false);
   const [loader, setLoader] = useState(false);
   // State
+  // State Filter User Blocked
+  const filterBlockedList = useRecoilValue(blockedUserChangeStatusVendor);
+  // State Filter User Blocked
   const [openListUser, setOpenListUser] = useRecoilState(openListUserMessages);
   // Get User Chat
   const getUserChat = () => {
@@ -55,7 +61,7 @@ function ListedUsers() {
   // UseEffect
   useEffect(() => {
     getUserChat();
-  }, []);
+  }, [filterBlockedList]);
   return (
     <div className="all-message full-height d-flex flex-column gap-4">
       {/* Head */}

@@ -38,6 +38,7 @@ import AccountSetting from "../Components/AccountSetting/AccountSetting";
 import BlokedList from "../Components/BlokedList/BlokedList";
 import PackageUsed from "../Pages/Vendor/Profile/Components/PackageUsed/PackageUsed";
 import ErrorRoute from "../Others/ErrorRoute/ErrorRoute";
+import Messages from "../Pages/UserProfile/Pages/RequestesMessages/Messages";
 
 export const Router = createBrowserRouter([
   {
@@ -118,7 +119,11 @@ export const Router = createBrowserRouter([
           },
           {
             path: "requestes-message",
-            element: <RequestesMessage />,
+            element: <Messages />,
+          },
+          {
+            path: "blocked",
+            element: <BlokedList />,
           },
         ],
       },
@@ -158,7 +163,7 @@ export const Router = createBrowserRouter([
           },
           {
             path: "setting",
-            element: <AccountSetting />,
+            element: <AccountSetting type="vendor" />,
           },
           {
             path: "package-used",
@@ -166,7 +171,7 @@ export const Router = createBrowserRouter([
           },
           {
             path: "blocked",
-            element: <BlokedList />,
+            element: <BlokedList type="vendor" />,
           },
         ],
       },

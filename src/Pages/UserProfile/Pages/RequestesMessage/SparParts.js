@@ -10,7 +10,7 @@ function SparParts({ handleCheckSpare, value = 1 }) {
         type="checkbox"
         onChange={handleCheckSpare}
       />
-      <div className="spare d-flex  justify-content-between border">
+      <div className="spare py-1 px-3 r-07 d-flex  justify-content-between border">
         <div className="text">
           <span className="title">{"دريكسيون لسيارة هيونداى النترا"}</span>
           <div className="made">
@@ -18,7 +18,7 @@ function SparParts({ handleCheckSpare, value = 1 }) {
             <span>{"صيني"}</span>
           </div>
         </div>
-        <div className="price">{"400 SAR"}</div>
+        <div className="price fs-12-500">{"400 SAR"}</div>
       </div>
     </label>
   );

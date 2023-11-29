@@ -1,4 +1,3 @@
-import React from "react";
 import "./Body.css";
 import { trans } from "../../../../../Components/Navbar/Navbar";
 import TheOrders from "./Components/TheOrders/TheOrders";

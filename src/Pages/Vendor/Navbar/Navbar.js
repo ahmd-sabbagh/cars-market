@@ -12,6 +12,9 @@ import { FaHome, FaUser } from "react-icons/fa";
 import { IoExit } from "react-icons/io5";
 import { useRecoilState } from "recoil";
 import { openFilterOrderVendor } from "../GlopalStateRecoil/AllData";
+import axios from "axios";
+import { basedDomin } from "../../../Api/basedDomin";
+import { ErrorComponent } from "../../../Others/Error";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -32,7 +35,25 @@ function Navbar() {
     navigate("/register/sign-in");
     window.location.reload();
   };
+  // Get Bar Ads
+  const [adsImage, setAdsImage] = useState();
+  const getBarAds = () => {
+    axios
+      .get(`${basedDomin}/public/data/services-and-ads`, {
+        headers: {
+          Accept: "application/json",
+        },
+      })
+      .then(({ data }) => {
+        setAdsImage(data.data.ads[0]);
+      })
+      .catch((error) => {
+        ErrorComponent(error, navigate);
+      });
+  };
+  // Get Bar Ads
   useEffect(() => {
+    getBarAds();
     // MenueUser
     const menuUserHandler = (e) => {
       if (
@@ -82,9 +103,10 @@ function Navbar() {
             </Link>
           </div>
           {/* Ads */}
-          <div className="ads flex-grow-1 d-none d-md-flex text-center flex-c">
-            <span>مساحة اعلانية</span>
-          </div>
+          <div
+            className="ads flex-grow-1 d-none d-md-flex text-center flex-c bg-image"
+            style={{ backgroundImage: `url(${adsImage})` }}
+          ></div>
           {/* user profile */}
           <div className="user-profile py-2">
             <div className="login-language  d-flex align-items-center gap-3">
@@ -208,7 +230,10 @@ function Navbar() {
           </div>
         </div>
         {/* ads phone */}
-        <div className="ads flex-grow-1 d-md-none"></div>
+        <div
+          className="ads flex-grow-1 d-md-none bg-image"
+          style={{ backgroundImage: `url(${adsImage})` }}
+        ></div>
       </div>
     </div>
   );

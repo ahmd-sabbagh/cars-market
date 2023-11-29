@@ -1,17 +1,14 @@
 import { useNavigate } from "react-router-dom";
-import { useRecoilState } from "recoil";
 import { useState } from "react";
 import axios from "axios";
-import { LoaderState } from "../../Recoil/All/Loader";
 import { basedDomin } from "../../Api/basedDomin";
 import { ErrorComponent, SuccsesComponent } from "../../Others/Error";
 import { trans } from "../Navbar/Navbar";
 
-function SecurtyData() {
+function SecurtyData({setLoader}) {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const [errorValidation, setErrorValidation] = useState({});
-  const [loader, setLoader] = useRecoilState(LoaderState);
   const [active, setActive] = useState(false);
   // states
   const [oldPassword, setOldPassword] = useState();

@@ -20,7 +20,7 @@ root.render(
   <React.StrictMode>
     <InternetConnection>
       <RecoilRoot>
-        <RouterProvider router={Router} />
+        <RouterProvider router={Router} /> 
       </RecoilRoot>
     </InternetConnection>
   </React.StrictMode>

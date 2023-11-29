@@ -42,7 +42,7 @@ function Spares({ data }) {
               <SpareCard {...item} key={item.id} />
             ))}
           </div>
-        </EmptyPopup>
+        </EmptyPopup> 
       )}
 
       <div

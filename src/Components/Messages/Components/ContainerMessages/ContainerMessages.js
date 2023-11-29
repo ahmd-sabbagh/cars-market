@@ -21,8 +21,8 @@ function ContainerMessages() {
       id="message-text"
       className="cont d-flex flex-column-reverse gap-2 flex-grow-1"
     >
-      {Messages.map((item) => (
-        <TextMessage {...item} key={item.id} />
+      {Messages.map((item,idx) => (
+        <TextMessage {...item} key={idx} />
       ))}
     </div>
   );
