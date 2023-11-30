@@ -7,7 +7,10 @@ import axios from "axios";
 import { basedDomin } from "./Api/basedDomin";
 import { ErrorComponent } from "./Others/Error";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { brandsCarsFromApi, repeatCountries } from "./Recoil/All/GeneralData";
+import {
+  brandsCarsFromApi,
+  repeatCountries,
+} from "./Recoil/All/GeneralData";
 import { LoaderState, LoaderStateEdit } from "./Recoil/All/Loader";
 import MainLoader from "./Components/MainLoader/MainLoader";
 import AOS from "aos";
@@ -15,6 +18,7 @@ import { generateYears } from "./Recoil/All/GenerateYears";
 import GetYears from "./Components/GetYears/GetYears";
 
 function App() {
+  localStorage.setItem("i18nextLng", "ar");
   const language = localStorage.getItem("i18nextLng");
   const navigate = useNavigate();
   // get genral data
@@ -42,6 +46,7 @@ function App() {
       });
   };
   // get genral data
+
   useEffect(() => {
     GetYears(setYears);
     getGeneralData();

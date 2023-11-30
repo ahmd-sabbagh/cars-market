@@ -16,7 +16,6 @@ import {
 import { ErrorComponent, SuccsesComponent } from "../../../../Others/Error";
 
 function Header() {
-  const user = JSON.parse(localStorage.getItem("user"))?.type;
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const [loader, setLoader] = useRecoilState(LoaderState);
@@ -80,7 +79,7 @@ function Header() {
           </button>
         </form>
         <Link
-          to={user === "vendor" ? "/my-profile/harag-message" : ""}
+          to={"/my-profile/harag-message"}
           className="flex-c gap-2 message bg-green text-white fit-content r-10"
         >
           <span>

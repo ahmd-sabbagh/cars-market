@@ -1,0 +1,8 @@
+.Panner .bg-image {
+  height: 243px;
+}
+@media (max-width:767px) {
+    .Panner .bg-image {
+        height: 141px;
+      }
+}

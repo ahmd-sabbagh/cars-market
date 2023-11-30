@@ -39,6 +39,7 @@ import BlokedList from "../Components/BlokedList/BlokedList";
 import PackageUsed from "../Pages/Vendor/Profile/Components/PackageUsed/PackageUsed";
 import ErrorRoute from "../Others/ErrorRoute/ErrorRoute";
 import Messages from "../Pages/UserProfile/Pages/RequestesMessages/Messages";
+import PublicInfo from "../Pages/PublicInfo/PublicInfo";
 
 export const Router = createBrowserRouter([
   {
@@ -88,6 +89,23 @@ export const Router = createBrowserRouter([
       {
         path: "add-edit/:Id",
         element: <AdsEdit />,
+      },
+      {
+        path: "general",
+        children: [
+          {
+            path: "",
+            element: <PublicInfo type="about" />,
+          },
+          {
+            path: "policy",
+            element: <PublicInfo type="policy" />,
+          },
+          {
+            path: "terms",
+            element: <PublicInfo type="terms" />,
+          },
+        ],
       },
       {
         path: "my-Profile",

@@ -61,6 +61,9 @@
     bottom: 0 !important;
     top: auto;
   }
+  .Home .Panner{
+    height: 141px;
+  }
 }
 /* Order */
 /* Application */

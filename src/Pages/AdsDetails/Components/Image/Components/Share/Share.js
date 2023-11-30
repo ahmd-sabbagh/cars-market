@@ -26,8 +26,8 @@ function ShareComponent() {
         <span className="face flex-c">
           <FacebookShareButton
             url={linkShare}
-            quote={"Gate In Article"}
-            hashtag="#Gate_In"
+            quote={"Cars Ads"}
+            hashtag="#Cars"
           >
             <FaFacebookSquare />
           </FacebookShareButton>
@@ -35,8 +35,8 @@ function ShareComponent() {
         <span className="twi flex-c">
           <TwitterShareButton
             url={linkShare}
-            quote={"Gate In Article"}
-            hashtag="#Gate_In"
+            quote={"Cars Ads"}
+            hashtag="#Cars"
           >
             <FaTwitter />
           </TwitterShareButton>
@@ -54,8 +54,8 @@ function ShareComponent() {
         <span className="what flex-c">
           <WhatsappShareButton
             url={linkShare}
-            quote={"Gate In Article"}
-            hashtag="#Gate_In"
+            quote={"Cars Ads"}
+            hashtag="#Cars"
           >
             <FaWhatsapp />
           </WhatsappShareButton>
@@ -63,8 +63,8 @@ function ShareComponent() {
         <span className="linked flex-c">
           <LinkedinShareButton
             url={linkShare}
-            quote={"Gate In Article"}
-            hashtag="#Gate_In"
+            quote={"Cars Ads"}
+            hashtag="#Cars"
           >
             <FaLinkedin />
           </LinkedinShareButton>

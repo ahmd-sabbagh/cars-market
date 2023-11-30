@@ -108,7 +108,7 @@ function Navbar() {
               {/* Login And Language and Notification */}
               <div className="login-language d-flex align-items-center gap-2 gap-sm-4 justify-content-center">
                 {/* Chat */}
-                <Link>
+                <Link to="/my-Profile/harag-message">
                   <Chat />
                 </Link>
                 {/* Contact Us */}

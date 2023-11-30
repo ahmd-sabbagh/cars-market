@@ -1,12 +1,24 @@
 .AddNewCar {
   background: rgba(30, 27, 27, 0.53);
-  min-height: 100vh;
+  height: 100vh;
   position: fixed;
   z-index: 1000;
+  overflow: scroll;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.AddNewCar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.AddNewCar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 .AddNewCar .cont {
-    max-width: 682px;
+  max-width: 682px;
   border-radius: 13px;
+  transform: scale(.8);
 }
 .AddNewCar .cont .top .text p {
   max-width: 325px;
@@ -21,14 +33,14 @@
   color: var(--text-color);
   display: block;
 }
-.AddNewCar input::placeholder{
+.AddNewCar input::placeholder {
   font-size: 14px !important;
   color: #333333 !important;
 }
 .AddNewCar .cont .bottom .buttons button {
   display: block;
   text-align: center;
-  padding: 15px;
+  padding: 16px;
   font-size: 18px;
   font-weight: 700;
   color: white;
@@ -42,14 +54,27 @@
   border-radius: 8px;
   border: 1px solid #e2e2e2;
 }
-.AddNewCar  .hent p{
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--text-color);
-    max-width: 255px;
+.AddNewCar .hent p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-color);
+  max-width: 255px;
 }
-@media (max-width:767px) {
-    .AddNewCar .cont{
-        transform: scale(.9);
-    }
+@media (max-width: 767px) {
+  .AddNewCar .cont {
+    transform: scale(0.9);
+  }
+  .AddNewCar .cont .bottom {
+    margin-top: 24px;
+  }
+  .AddNewCar .cont .bottom .buttons button{
+    padding: 8px;
+    font-size: 14px;
+  }
+  .AddNewCar .photo {
+    padding: 11px;
+  }
+  .AddNewCar .span {
+    font-size: 12px;
+  }
 }

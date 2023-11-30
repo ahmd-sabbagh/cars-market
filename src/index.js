@@ -7,6 +7,9 @@ import "aos/dist/aos.css";
 // Bootstrap
 import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "/node_modules/bootstrap/dist/js/bootstrap.min";
+// react-slick
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // Custom Css
 import "./index.css";
 
@@ -20,7 +23,7 @@ root.render(
   <React.StrictMode>
     <InternetConnection>
       <RecoilRoot>
-        <RouterProvider router={Router} /> 
+        <RouterProvider router={Router} />
       </RecoilRoot>
     </InternetConnection>
   </React.StrictMode>

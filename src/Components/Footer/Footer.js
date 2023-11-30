@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Footer.css";
 import { ReactComponent as Logo } from "./Assets/logo.svg";
 import { ReactComponent as Instagram } from "./Assets/instagram.svg";
@@ -7,11 +8,32 @@ import { ReactComponent as Facebook } from "./Assets/facebook.svg";
 import { ReactComponent as Twitter } from "./Assets/twitter.svg";
 import { Link, NavLink } from "react-router-dom";
 import { trans } from "../Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
+import { ErrorComponent } from "../../Others/Error";
+import { basedDomin } from "../../Api/basedDomin";
 function Footer() {
+  const navigate = useNavigate();
+  const [questions, setQuestions] = useState({});
+  // Get Links Social Media
+  const getContactUs = () => {
+    axios
+      .get(`${basedDomin}/public/contact-us-data`, {
+        headers: {
+          Accept: "application/json",
+        },
+      })
+      .then(({ data }) => {
+        setQuestions(data.data.settings);
+      })
+      .catch((error) => {
+        ErrorComponent(error, navigate);
+      });
+  };
+  // Get Links Social Media
   const linksText = [
     {
       text: trans("footer.links.home"),
-      to: "",
+      to: "/",
     },
     {
       text: trans("footer.links.car-auction"),
@@ -33,21 +55,24 @@ function Footer() {
   const linksSocial = [
     {
       icon: <Twitter />,
-      to: "",
+      to: questions?.twitter_link,
     },
     {
       icon: <Facebook />,
-      to: "",
+      to: questions?.facebook_link,
     },
     {
       icon: <Linked />,
-      to: "",
+      to: questions?.linkedin_link,
     },
     {
       icon: <Instagram />,
-      to: "",
+      to: questions?.instagram_link,
     },
   ];
+  useEffect(() => {
+    getContactUs();
+  }, []);
   return (
     <div className="Footer mt-4 pt-5">
       <div className="container">
@@ -69,14 +94,14 @@ function Footer() {
           </div>
           <div className="links d-flex gap-5">
             <NavLink
-            to={""}
+              to={"/general/policy"}
               className={`${({ isActive }) =>
                 isActive ? "nav-link active" : "nav-link"} `}
             >
               {trans("footer.links.uses")}
             </NavLink>
             <NavLink
-            to={""}
+              to={"/about-carz#questions"}
               className={`${({ isActive }) =>
                 isActive ? "nav-link active" : "nav-link"} `}
             >

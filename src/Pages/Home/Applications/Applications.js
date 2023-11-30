@@ -11,9 +11,9 @@ function Applications() {
       <div className="container">
         <h3 className="text-center fs-40-700">{trans("home.application")}</h3>
         <div className="d-flex justify-content-center gap-3 flex-wrap">
-          <Link>
+          {/* <Link>
             <Gallery />
-          </Link>
+          </Link> */}
           <Link>
             <Google />
           </Link>

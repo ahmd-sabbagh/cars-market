@@ -114,7 +114,7 @@ function  AddNewCar() {
   return (
     <>
       <div className="AddNewCar top-0 start-0 full-width flex-c">
-        <div className="cont bg-white p-4 p-sm-5" ref={tapRef}>
+        <div className="cont bg-white p-4 p-md-5" ref={tapRef}>
           {/* Top */}
           <div className="top d-flex flex-column flex-lg-row align-items-center gap-4 gap-lg-5">
             <div className="text ">
@@ -132,7 +132,7 @@ function  AddNewCar() {
           {/* Bottom */}
           <form
             onSubmit={onSubmit}
-            className="bottom d-flex flex-column gap-3 gap-lg-4"
+            className="bottom d-flex flex-column gap-2 gap-lg-4"
           >
             {/* Company Car */}
             <div className="d-flex flex-column gap-2">
@@ -166,7 +166,7 @@ function  AddNewCar() {
                 <input
                   type="text"
                   placeholder={trans("add_new_car.number_placeholder")}
-                  className="border r-07 p-3"
+                  className="border r-07 p-2 p-md-3"
                   onChange={(e) => {
                     setStructerNum(e.target.value);
                   }}

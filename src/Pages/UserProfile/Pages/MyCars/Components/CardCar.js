@@ -9,13 +9,13 @@ function CardCar({ card }) {
     <>
       {editView && <EditMyCar Id={card.id} setEditView={setEditView} />}
       <div
-        className="CardCar r-05 p-4 border box-sh"
+        className="CardCar r-05 p-3 p-md-4 border box-sh"
         data-aos="fade-up"
         data-aos-duration={`1500`}
         data-aos-offset="50"
       >
         <div className="row g-4 align-items-center">
-          <div className="col-12 col-md-6">
+          <div className="col-12">
             <div className="d-flex gap-3">
               {/* Logo */}
               <div
@@ -54,12 +54,6 @@ function CardCar({ card }) {
                 </DotsMenu>
               </div>
             </div>
-          </div>
-          <div className="col-12 col-md-6">
-            <div
-              className="image bg-image r-07"
-              style={{ backgroundImage: `url(${image})` }}
-            ></div>
           </div>
         </div>
       </div>

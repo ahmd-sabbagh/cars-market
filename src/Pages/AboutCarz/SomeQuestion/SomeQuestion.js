@@ -1,37 +1,63 @@
+import axios from "axios";
 import "./SomeQuestion.css";
+import { useEffect, useState } from "react";
+import { basedDomin } from "../../../Api/basedDomin";
+import { ErrorComponent } from "../../../Others/Error";
+import { useNavigate } from "react-router-dom";
 
 function SomeQuestion() {
+  const navigate = useNavigate();
+  const [questions, setQuestions] = useState([]);
+  // Get contact-us-data
+  const getContactUs = () => {
+    axios
+      .get(`${basedDomin}/public/contact-us-data`, {
+        headers: {
+          Accept: "application/json",
+        },
+      })
+      .then(({ data }) => {
+        setQuestions(data.data.questions);
+      })
+      .catch((error) => {
+        ErrorComponent(error, navigate);
+      });
+  };
+  // Get contact-us-data
+  useEffect(() => {
+    getContactUs();
+  }, []);
   return (
-    <div className="SomeQuestion mx-auto">
+    <div className="SomeQuestion mx-auto" id="questions">
       <div
         className="accordion mt-5 accordion-flush d-flex flex-column gap-1"
         id="accordionFlushExample"
       >
-        <div className="accordion-item border-bottom rounded-0">
-          <h2 className="accordion-header" id="flush-headingOne">
-            <button
-              className="accordion-button px-0 "
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseOne"
-              aria-expanded="false"
-              aria-controls="flush-collapseOne"
+        {questions?.map((item) => (
+          <div className="accordion-item border-bottom rounded-0" key={item.id}>
+            <h2 className="accordion-header" id={`flush-heading-${item.id}`}>
+              <button
+                className="accordion-button px-0 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target={`#flush-collapse-${item.id}`}
+                aria-expanded="false"
+                aria-controls={`flush-collapse-${item.id}`}
+              >
+                {item.title}
+              </button>
+            </h2>
+            <div
+              id={`flush-collapse-${item.id}`}
+              className="accordion-collapse collapse"
+              aria-labelledby={`flush-heading-${item.id}`}
+              data-bs-parent="#accordionFlushExample"
             >
-              ماذا يفيدنى انشاء السيرة الذاتية ؟
-            </button>
-          </h2>
-          <div
-            id="flush-collapseOne"
-            className="accordion-collapse collapse show"
-            aria-labelledby="flush-headingOne"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div className="accordion-body p-0 pb-4">
-            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العمي
+              <div className="accordion-body p-0 pb-4">{item.description}</div>
             </div>
           </div>
-        </div>
-        <div className="accordion-item border-bottom rounded-0">
+        ))}
+        {/* <div className="accordion-item border-bottom rounded-0">
           <h2 className="accordion-header" id="flush-headingTwo">
             <button
               className="accordion-button px-0 collapsed"
@@ -86,7 +112,7 @@ function SomeQuestion() {
               this would look in a real-world application.
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

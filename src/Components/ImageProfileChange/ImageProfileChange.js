@@ -33,6 +33,7 @@ function ImageProfileChange({ setState, state, setActive }) {
         <input
           id="select"
           type="file"
+          accept="image/png,image/jpeg"
           onChange={(e) => {
             setState(e.target.files[0]);
             setActive(true);

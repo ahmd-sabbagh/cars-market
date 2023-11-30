@@ -54,7 +54,7 @@ function DropdownToAll({
     <div className="Dropdowns position-relative">
       {/* input */}
       <div
-        className="input-costome-select d-flex align-items-center justify-content-between border r-07 p-3 bg-white"
+        className="input-costome-select d-flex align-items-center justify-content-between border r-07 p-2 p-md-3 bg-white"
         onClick={() => {
           setOpen(!open);
         }}
