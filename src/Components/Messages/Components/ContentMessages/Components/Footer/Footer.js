@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { trans } from "../../../../../Navbar/Navbar";
 import { ReactComponent as Send } from "../../../../Assets/send.svg";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ErrorComponent } from "../../../../../../Others/Error";
 import axios from "axios";
 import { basedDomin } from "../../../../../../Api/basedDomin";
@@ -11,8 +11,9 @@ import {
   messagesChanged,
 } from "../../../../GlopalStateRecoil/AllData";
 import Loader from "../../../../../Loader/Loader";
+import Pusher from "pusher-js";
 
-function Footer() {
+function Footer({ vendor_id, order, buyer_data }) {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const ref = useRef();
@@ -40,13 +41,29 @@ function Footer() {
       setMessages([data.data, ...Messages]);
       setLoader(false);
       ref.current.value = "";
-      sendMessage("")
+      sendMessage("");
     } catch (error) {
       ErrorComponent(error, navigate);
       setLoader(false);
     }
   };
   // Onsubmit
+  useEffect(() => {
+    const pusher = new Pusher("e1a99b18f88e0adba1aa", {
+      cluster: "eu",
+    });
+    const channel = pusher.subscribe(
+      `user-channel-${vendor_id}-chat-order-${order.id}-user-${buyer_data.id}`
+    );
+    channel.bind(`chat-order-${order.id}-user-${buyer_data.id}`, (message) => {
+      setMessages((current) => [message.data, ...current]);
+    });
+    return () => {
+      pusher.unsubscribe(
+        `user-channel-${vendor_id}-chat-order-${order.id}-user-${buyer_data.id}`
+      );
+    };
+  }, []);
   return (
     <div className="send-message border-top mb-2">
       <form onSubmit={submit} className="input-message d-flex">

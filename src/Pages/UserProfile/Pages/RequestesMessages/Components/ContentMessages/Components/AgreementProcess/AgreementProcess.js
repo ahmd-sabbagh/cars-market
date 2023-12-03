@@ -98,7 +98,6 @@ function AgreementProcess({
         setUsersChat(data.data);
         SuccsesComponent(data.message);
         setLoader(false);
-        console.log(data);
       })
       .catch((error) => {
         ErrorComponent(error, navigate);

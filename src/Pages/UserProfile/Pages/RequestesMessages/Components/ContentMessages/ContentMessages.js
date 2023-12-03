@@ -16,6 +16,7 @@ import {
 } from "../../GlopalStateRecoil/AllData";
 import AgreementProcess from "./Components/AgreementProcess/AgreementProcess";
 import { trans } from "../../../../../../Components/Navbar/Navbar";
+
 function ContentMessages() {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();

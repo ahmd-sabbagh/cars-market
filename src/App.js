@@ -18,7 +18,6 @@ import { generateYears } from "./Recoil/All/GenerateYears";
 import GetYears from "./Components/GetYears/GetYears";
 
 function App() {
-  localStorage.setItem("i18nextLng", "ar");
   const language = localStorage.getItem("i18nextLng");
   const navigate = useNavigate();
   // get genral data

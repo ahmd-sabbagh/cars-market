@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { ReactComponent as Logo } from "./Assets/logo.svg";
 import { ReactComponent as ArabicFlag } from "./Assets/sudiFlag.svg";
@@ -13,7 +13,6 @@ import { useRef } from "react";
 import MenueUser from "./MenueUser/MenueUser";
 
 function Navbar() {
-  const navigat = useNavigate();
   const menuUser = useRef();
   const menuUserClick = useRef();
   const menuLanguage = useRef();
@@ -22,10 +21,6 @@ function Navbar() {
   const [windowOpen, setWindoOpen] = useState(true);
   const [Open, setOpen] = useState(false);
   // // State Open User Window
-  // // State login
-  const [login, setLogin] = useState(false);
-  // // State login
-
   const userAccount = JSON.parse(localStorage.getItem("user"));
   useEffect(() => {
     // MenueUser
@@ -53,6 +48,7 @@ function Navbar() {
     };
   }, []);
   // Local Storage
+  // eslint-disable-next-line no-unused-vars
   var { t, i18n } = useTranslation();
   const lang = localStorage.getItem("i18nextLng");
   return (

@@ -13,7 +13,6 @@ import { useRef } from "react";
 import ContainerMessages from "../ContainerMessages/ContainerMessages";
 import Offers from "./Components/Offers/Offers";
 import { trans } from "../../../Navbar/Navbar";
-import Pusher from "pusher-js";
 
 function ContentMessages() {
   const token = localStorage.getItem("token");
@@ -53,30 +52,14 @@ function ContentMessages() {
         }
       });
   };
-  // Pusher Get New Message
-  const pusher = new Pusher("e1a99b18f88e0adba1aa", {
-    cluster: "eu",
-  });
-  const pusherFunction = () => {
-    const channel = pusher.subscribe(
-      `user-channel-${usersChat?.vendor_id}-chat-order-${usersChat?.order.id}-user-${usersChat?.buyer_data.id}`
-    );
-    channel.bind(
-      `chat-order-${usersChat?.order.id}-user-${usersChat?.buyer_data.id}`,
-      (message) => {
-        setMessages([message.data, ...Messages]);
-      }
-    );
-  };
-  // Pusher Get New Message
   // UseEffect
   useEffect(() => {
     if (userId) {
-      pusherFunction();
       getUserChat();
     } else {
       console.log("Nothing");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
   // Get UseR Chat
   return (
@@ -103,7 +86,7 @@ function ContentMessages() {
                 {trans("requestes_message.done_deal_message")}
               </div>
             ) : (
-              <Footer refCont={refCont} />
+              <Footer {...usersChat} refCont={refCont} />
             )}
           </>
         ) : (
