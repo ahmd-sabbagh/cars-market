@@ -19,7 +19,8 @@ function ContainerMessages() {
     <div
       ref={refCont}
       id="message-text"
-      className="cont d-flex flex-column-reverse gap-2 flex-grow-1"
+      className="cont d-flex flex-column-reverse gap-1 flex-grow-1"
+      style={{ marginTop: "62px" }}
     >
       {Messages.map((item,idx) => (
         <TextMessage {...item} key={idx} />
