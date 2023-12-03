@@ -5,7 +5,6 @@ import Footer from "./Components/Footer/Footer";
 import NoChatOpen from "./Components/NoChatOpen/NoChatOpen";
 import { useRecoilState, useRecoilValue } from "recoil";
 import axios from "axios";
-import { useRef } from "react";
 import ContainerMessages from "../ContainerMessages/ContainerMessages";
 import Offers from "./Components/Offers/Offers";
 import { basedDomin } from "../../../../../../Api/basedDomin";
@@ -17,14 +16,11 @@ import {
 } from "../../GlopalStateRecoil/AllData";
 import AgreementProcess from "./Components/AgreementProcess/AgreementProcess";
 import { trans } from "../../../../../../Components/Navbar/Navbar";
-import Pusher from "pusher-js";
-
 function ContentMessages() {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
-  const refCont = useRef();
   const userId = useRecoilValue(buyerChangeUserId);
-  // Get UseR Chat
+  // Get User Chat
   const [Messages, setMessages] = useRecoilState(buyerMessagesChanged);
   const [usersChat, setUsersChat] = useState();
   const [exist, setExist] = useState(false);
@@ -56,26 +52,9 @@ function ContentMessages() {
         }
       });
   };
-  // Pusher Get New Message
-  const pusher = new Pusher("e1a99b18f88e0adba1aa", {
-    cluster: "eu",
-  });
-  const pusherFunction = () => {
-    const channel = pusher.subscribe(
-      `user-channel-${usersChat?.buyer_data.id}-chat-order-${usersChat?.order.id}-user-${usersChat?.vendor_id}`
-    );
-    channel.bind(
-      `chat-order-${usersChat?.order.id}-user-${usersChat?.vendor_id}`,
-      (message) => {
-        setMessages([message.data, ...Messages]);
-      }
-    );
-  };
-  // Pusher Get New Message
   // UseEffect
   useEffect(() => {
     if (userId) {
-      pusherFunction();
       getUserChat();
     } else {
       console.log("Nothing");
@@ -108,7 +87,7 @@ function ContentMessages() {
                 {trans("requestes_message.done_deal_message")}
               </div>
             ) : (
-              <Footer refCont={refCont} />
+              <Footer {...usersChat} />
             )}
           </>
         ) : (

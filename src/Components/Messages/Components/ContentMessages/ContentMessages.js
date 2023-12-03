@@ -72,7 +72,7 @@ function ContentMessages() {
   // UseEffect
   useEffect(() => {
     if (userId) {
-      pusherFunction()
+      pusherFunction();
       getUserChat();
     } else {
       console.log("Nothing");
@@ -107,7 +107,7 @@ function ContentMessages() {
             )}
           </>
         ) : (
-          <div className=" flex-grow-1 flex-c flex-column gap-4 ">
+          <div className="flex-grow-1 flex-c flex-column gap-4 ">
             <NoChatOpen />
           </div>
         )}

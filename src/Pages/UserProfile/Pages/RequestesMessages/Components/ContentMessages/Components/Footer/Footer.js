@@ -1,15 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as Send } from "../../../../Assets/send.svg";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { ErrorComponent } from "../../../../../../../../Others/Error";
 import { trans } from "../../../../../../../../Components/Navbar/Navbar";
 import Loader from "../../../../../../../../Components/Loader/Loader";
 import { basedDomin } from "../../../../../../../../Api/basedDomin";
-import { buyerChangeUserId, buyerMessagesChanged } from "../../../../GlopalStateRecoil/AllData";
+import {
+  buyerChangeUserId,
+  buyerMessagesChanged,
+} from "../../../../GlopalStateRecoil/AllData";
+import Pusher from "pusher-js";
 
-function Footer() {
+function Footer({ buyer_data, order, vendor_id }) {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const ref = useRef();
@@ -34,16 +38,35 @@ function Footer() {
           },
         }
       );
-      setMessages([data.data,...Messages]);
+      setMessages([data.data, ...Messages]);
       setLoader(false);
       ref.current.value = "";
-      sendMessage("")
+      sendMessage("");
     } catch (error) {
       ErrorComponent(error, navigate);
       setLoader(false);
     }
   };
   // Onsubmit
+  // Pusher Request Message
+  useEffect(() => {
+    const pusher = new Pusher("e1a99b18f88e0adba1aa", {
+      cluster: "eu",
+    });
+    const channel = pusher.subscribe(
+      `user-channel-${buyer_data.id}-chat-order-${order.id}-user-${vendor_id}`
+    );
+    channel.bind(`chat-order-${order.id}-user-${vendor_id}`, (message) => {
+      setMessages((current) => [message.data, ...current]);
+    });
+    return () => {
+      pusher.unsubscribe(
+        `user-channel-${buyer_data.id}-chat-order-${order.id}-user-${vendor_id}`
+      );
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // Pusher Request Message
   return (
     <div className="send-message border-top p-3">
       <form onSubmit={submit} className="input-message d-flex">
