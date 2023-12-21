@@ -62,7 +62,12 @@ function AboutCarz() {
       {defaultCar && <AddCar />}
       <div className="AboutCarz py-5">
         <div className="container">
-          <h3 className="text-center mx-auto mt-4">
+          <h3
+            className="text-center mx-auto mt-4"
+            data-aos="fade-down"
+            data-aos-duration={`1000`}
+            data-aos-offset="10"
+          >
             {trans("about_carz.title")}
           </h3>
           {data.map((item, idx) => (

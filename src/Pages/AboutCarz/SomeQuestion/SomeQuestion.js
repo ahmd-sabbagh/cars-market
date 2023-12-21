@@ -33,8 +33,14 @@ function SomeQuestion() {
         className="accordion mt-5 accordion-flush d-flex flex-column gap-1"
         id="accordionFlushExample"
       >
-        {questions?.map((item) => (
-          <div className="accordion-item border-bottom rounded-0" key={item.id}>
+        {questions?.map((item,idx) => (
+          <div
+            className="accordion-item border-bottom rounded-0"
+            key={item.id}
+            data-aos="fade-up"
+            data-aos-duration={`1000`}
+            data-aos-offset="10"
+          >
             <h2 className="accordion-header" id={`flush-heading-${item.id}`}>
               <button
                 className="accordion-button px-0 collapsed"

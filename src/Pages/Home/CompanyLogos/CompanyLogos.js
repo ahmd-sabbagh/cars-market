@@ -1,5 +1,5 @@
 import React from "react";
-import './CompanyLogos.css'
+import "./CompanyLogos.css";
 import Image1 from "./Assets/1.png";
 import Image2 from "./Assets/2.png";
 import Image3 from "./Assets/3.png";
@@ -13,7 +13,12 @@ function CompanyLogos() {
   return (
     <div className="CompanyLogos">
       <div className="container">
-        <div className="images d-flex justify-content-center align-items-center gap-5 flex-wrap">
+        <div
+          className="images d-flex justify-content-center align-items-center gap-5 flex-wrap"
+          data-aos="fade-up"
+          data-aos-duration={`1000`}
+          data-aos-offset="10"
+        >
           {imgArr.map((item, idx) => (
             <div
               key={idx}

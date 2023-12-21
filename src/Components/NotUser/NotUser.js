@@ -1,9 +1,8 @@
-import React from "react";
 import { LiaUserSlashSolid } from "react-icons/lia";
-import { trans } from "../../../../../../../../Components/Navbar/Navbar";
+import { trans } from "../Navbar/Navbar";
 function NotUser() {
   return (
-    <div className="NotUser d-flex flex-column align-items-center">
+    <div className="NotUser d-flex flex-column align-items-center justify-content-center full-height">
       <div className="color-main" style={{ fontSize: "50px" }}>
         <LiaUserSlashSolid />
       </div>

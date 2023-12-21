@@ -322,7 +322,9 @@
       "title": "Please state the reason for reporting",
       "placeholder": "Write here...",
       "send": "Send"
-    }
+    },
+    "send_message_to": "Send a message to",
+    "title": "Write the text of the message"
   },
   "add_ads_car": {
     "route_nav": {

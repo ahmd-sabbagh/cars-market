@@ -30,12 +30,22 @@ function Orders() {
         <div className="row g-4 g-lg-5 align-items-center">
           <div className="col-12 col-md-6">
             <div className="blue">
-              <h3 className="fs-32-700 text-white mb-4">
+              <h3
+                className="fs-32-700 text-white mb-4"
+                data-aos="zoom-out"
+                data-aos-duration={`1000`}
+              >
                 {trans("home.order.title")}
               </h3>
               <div className="parts d-flex flex-column gap-4">
                 {data.map((item, idx) => (
-                  <div className="d-flex gap-4" key={idx}>
+                  <div
+                    className="d-flex gap-4"
+                    key={idx}
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                    data-aos-duration={`1${idx}00`}
+                  >
                     <div
                       className="image"
                       style={{ backgroundImage: `url(${item.image})` }}
@@ -53,13 +63,28 @@ function Orders() {
           </div>
           <div className="col-12 col-md-6">
             <div className="green d-flex flex-column gap-4">
-              <div className="shap fit-content mx-auto">
+              <div
+                className="shap fit-content mx-auto"
+                data-aos="zoom-out"
+                data-aos-duration={`1000`}
+              >
                 <Shape />
               </div>
-              <p className="text-center text-white">
+              <p
+                className="text-center text-white"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration={`1000`}
+              >
                 {trans("home.order.description")}
               </p>
-              <Link to={"/cars-market"} className="d-block mx-auto fit-content">
+              <Link
+                to={"/cars-market"}
+                className="d-block mx-auto fit-content"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration={`1200`}
+              >
                 {trans("home.order.button")}
               </Link>
             </div>

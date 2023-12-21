@@ -23,7 +23,7 @@ import ServiceProviderDetails from "../Pages/ServiceProviderDetails/ServiceProvi
 import VendorDetails from "../Pages/VendorDetails/VendorDetails";
 import MyAds from "../Pages/UserProfile/Pages/MyAds/MyAds";
 import HaragMessage from "../Pages/UserProfile/Pages/HaragMessage/HaragMessage";
-import RequestesMessage from "../Pages/UserProfile/Pages/RequestesMessage/RequestesMessage";
+// import RequestesMessage from "../Pages/UserProfile/Pages/RequestesMessage/RequestesMessage";
 import VerifyCode from "../Rigester/VerifyCode/VerifyCode";
 import CheckUser from "../Others/CheckUser";
 import OrderFlat from "../Pages/OrderFlat/OrderFlat";

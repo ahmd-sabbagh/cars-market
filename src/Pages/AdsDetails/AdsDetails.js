@@ -67,7 +67,7 @@ function AdsDetails() {
                   <Title Data={data?.ad} />
                   <Image Data={data?.ad} />
                   <CarDetails Data={data?.ad} />
-                  <OtherImages />
+                  <OtherImages {...data} />
                   <Comments ownerId={data?.ad?.owner?.id} />
                 </div>
               </div>

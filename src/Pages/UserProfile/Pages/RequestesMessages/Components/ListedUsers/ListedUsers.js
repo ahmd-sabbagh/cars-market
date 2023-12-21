@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import User from "./Components/User";
 import { IoClose } from "react-icons/io5";
 import { useRecoilState, useRecoilValue } from "recoil";
-import NotUser from "./Components/NotUser/NotUser";
 import axios from "axios";
 import { useState } from "react";
 import ScrollarComponent from "../../../../../../Components/ScrollarComponent/ScrollarComponent";
@@ -16,6 +15,7 @@ import {
   buyerOpenListUserMessages,
   filterUserListType,
 } from "../../GlopalStateRecoil/AllData";
+import NotUser from "../../../../../../Components/NotUser/NotUser";
 
 function ListedUsers() {
   //

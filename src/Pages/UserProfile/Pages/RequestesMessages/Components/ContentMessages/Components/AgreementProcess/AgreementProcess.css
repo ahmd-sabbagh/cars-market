@@ -4,3 +4,38 @@
   background: rgb(27 36 105 / 10%);
   color: var(--text-color);
 }
+.confirm-buy {
+  width: 250px;
+}
+.confirm-buy > div {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.confirm-buy .buttons button,
+.lottie .buttons button {
+  display: block;
+  flex: 1;
+  border-radius: 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 11px 24px;
+}
+.confirm-buy .buttons button:first-child,
+.lottie .buttons button:first-child {
+  border: none;
+  color: white;
+  background-color: var(--main-color);
+}
+.confirm-buy .buttons button:last-child,
+.lottie .buttons button:last-child {
+  border: 1px solid #1b2469;
+  background-color: transparent;
+}
+.lottie .text {
+  max-width: 456px;
+}
+/* Popup */

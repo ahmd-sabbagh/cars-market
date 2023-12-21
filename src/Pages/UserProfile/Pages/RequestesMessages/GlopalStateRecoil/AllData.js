@@ -8,8 +8,8 @@ export const buyerOpenListUserMessages = atom({
 export const buyerChangeUserId = atom({
   key: "buyerChangeUserId",
   default: {
-    order_id: "default",
-    vendor_id: "default",
+    order_id: "",
+    vendor_id: "",
   },
 });
 
@@ -29,7 +29,7 @@ export const choseSparePartsArray = atom({
 
 export const filterUserListType = atom({
   key: "filterUserListType",
-  default: "flatness",
+  default: "maintenance_services",
 });
 
 // open window orders in chat

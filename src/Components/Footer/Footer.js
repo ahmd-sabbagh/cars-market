@@ -80,7 +80,12 @@ function Footer() {
           <div className="logo">
             <Logo />
           </div>
-          <div className="link-bar d-flex gap-4 gap-md-5 flex-wrap justify-content-center">
+          <div
+            className="link-bar d-flex gap-4 gap-md-5 flex-wrap justify-content-center"
+            data-aos="fade-up"
+            data-aos-duration={`1000`}
+            data-aos-offset="10"
+          >
             {linksText.map((item, idx) => (
               <NavLink
                 className={`${({ isActive }) =>
@@ -92,7 +97,12 @@ function Footer() {
               </NavLink>
             ))}
           </div>
-          <div className="links d-flex gap-5">
+          <div
+            className="links d-flex gap-5"
+            data-aos="fade-up"
+            data-aos-duration={`1200`}
+            data-aos-offset="10"
+          >
             <NavLink
               to={"/general/policy"}
               className={`${({ isActive }) =>
@@ -112,7 +122,13 @@ function Footer() {
             <span className="text">{trans("footer.footer-footer")}</span>
             <div className="social d-flex gap-3 gap-md-4 align-items-center">
               {linksSocial.map((item, idx) => (
-                <Link to={item.to} key={idx}>
+                <Link
+                  to={item.to}
+                  key={idx}
+                  data-aos="zoom-in"
+                  data-aos-duration={`1${idx}00`}
+                  data-aos-offset="10"
+                >
                   {item.icon}
                 </Link>
               ))}

@@ -9,15 +9,22 @@ function Applications() {
   return (
     <div className="Applications">
       <div className="container">
-        <h3 className="text-center fs-40-700">{trans("home.application")}</h3>
+        <h3
+          className="text-center fs-40-700"
+          data-aos="zoom-in-up"
+          data-aos-duration={`1200`}
+          data-aos-offset="10"
+        >
+          {trans("home.application")}
+        </h3>
         <div className="d-flex justify-content-center gap-3 flex-wrap">
           {/* <Link>
             <Gallery />
           </Link> */}
-          <Link>
+          <Link data-aos="fade-left" data-aos-duration={`1200`} data-aos-offset="10">
             <Google />
           </Link>
-          <Link>
+          <Link data-aos="fade-right" data-aos-duration={`1200`} data-aos-offset="10">
             <App />
           </Link>
         </div>

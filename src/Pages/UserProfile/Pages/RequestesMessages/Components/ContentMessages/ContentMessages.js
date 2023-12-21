@@ -25,7 +25,7 @@ function ContentMessages() {
   const [Messages, setMessages] = useRecoilState(buyerMessagesChanged);
   const [usersChat, setUsersChat] = useState();
   const [exist, setExist] = useState(false);
-  const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
   const getUserChat = () => {
     setLoader(true);
     axios
@@ -55,12 +55,10 @@ function ContentMessages() {
   };
   // UseEffect
   useEffect(() => {
-    if (userId) {
+    if (userId.order_id) {
       getUserChat();
-    } else {
-      console.log("Nothing");
     }
-  }, [userId]);
+  }, [userId.order_id]);
   // Get UseR Chat
   return (
     <div className="ContentMessages d-flex flex-column flex-grow-1">

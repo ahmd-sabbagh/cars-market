@@ -1,0 +1,8 @@
+#message-harag {
+  overflow-y: scroll;
+  transition: 0.5s;
+  height: 300px;
+}
+#message-harag::-webkit-scrollbar {
+  display: none;
+}
