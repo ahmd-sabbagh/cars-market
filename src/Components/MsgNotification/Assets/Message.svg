@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.12" height="26.12" viewBox="0 0 26.12 26.12">
+  <g id="Message" transform="translate(-247 -55)">
+    <g id="Message-Icon" transform="translate(247 55)">
+      <path id="Vector" d="M0,0H26.12V26.12H0Z" fill="none"/>
+      <path id="Vector-2" data-name="Vector" d="M8.707,0H13.06a8.707,8.707,0,1,1,0,17.413v3.809C7.618,19.046,0,15.781,0,8.707A8.707,8.707,0,0,1,8.707,0Zm2.177,15.237H13.06a6.53,6.53,0,1,0,0-13.06H8.707a6.53,6.53,0,0,0-6.53,6.53c0,3.929,2.679,6.493,8.707,9.229Z" transform="translate(2.177 3.265)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

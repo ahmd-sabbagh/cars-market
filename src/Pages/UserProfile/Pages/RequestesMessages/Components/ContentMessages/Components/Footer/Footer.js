@@ -57,6 +57,7 @@ function Footer({ buyer_data, order, vendor_id }) {
       `user-channel-${buyer_data.id}-chat-order-${order.id}-user-${vendor_id}`
     );
     channel.bind(`chat-order-${order.id}-user-${vendor_id}`, (message) => {
+      console.log(message)
       setMessages((current) => [message.data, ...current]);
     });
     return () => {

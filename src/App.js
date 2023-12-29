@@ -16,6 +16,7 @@ import MainLoader from "./Components/MainLoader/MainLoader";
 import AOS from "aos";
 import { generateYears } from "./Recoil/All/GenerateYears";
 import GetYears from "./Components/GetYears/GetYears";
+import Msg from "./Components/MsgNotification/Msg";
 
 function App() {
   const language = localStorage.getItem("i18nextLng");
@@ -61,6 +62,7 @@ function App() {
         dir={language === "en" ? "ltr" : "rtl"}
       >
         <ScrollToTop />
+        <Msg />
         <Navbar />
         <Outlet />
         <Footer />
