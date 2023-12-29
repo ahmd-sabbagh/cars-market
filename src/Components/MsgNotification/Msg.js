@@ -2,17 +2,18 @@ import "./Msg.css";
 import { ReactComponent as Mes } from "./Assets/Message.svg";
 import { useState } from "react";
 import ViewLess from "./Components/ViewLess";
+import OpenMsg from "./Components/OpenMsg";
 
 function Msg() {
   const [view, setView] = useState(false);
   return (
     <div className="Msg-Notic position-fixed">
-      <div className="windwo position-relative p-4 box-sh">
+      <div className="windwo position-relative p-3 box-sh">
         <div className="circle"></div>
         <div className="image flex-c">
           <Mes />
         </div>
-        {view ? "" : <ViewLess setView={setView} />}
+        {view ? <OpenMsg /> : <ViewLess setView={setView} />}
       </div>
     </div>
   );

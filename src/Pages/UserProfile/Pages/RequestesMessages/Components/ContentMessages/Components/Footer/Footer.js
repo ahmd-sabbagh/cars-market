@@ -12,6 +12,7 @@ import {
   buyerMessagesChanged,
 } from "../../../../GlopalStateRecoil/AllData";
 import Pusher from "pusher-js";
+import { showNotificationMsg } from "../../../../../../../../Components/MsgNotification/recoil/atoms";
 
 function Footer({ buyer_data, order, vendor_id }) {
   const token = localStorage.getItem("token");
@@ -48,6 +49,8 @@ function Footer({ buyer_data, order, vendor_id }) {
     }
   };
   // Onsubmit
+  const [showNotificationMessage, setShowNotificationMessage] =
+    useRecoilState(showNotificationMsg);
   // Pusher Request Message
   useEffect(() => {
     const pusher = new Pusher("e1a99b18f88e0adba1aa", {
@@ -57,8 +60,9 @@ function Footer({ buyer_data, order, vendor_id }) {
       `user-channel-${buyer_data.id}-chat-order-${order.id}-user-${vendor_id}`
     );
     channel.bind(`chat-order-${order.id}-user-${vendor_id}`, (message) => {
-      console.log(message)
+      console.log(message);
       setMessages((current) => [message.data, ...current]);
+      setShowNotificationMessage(true);
     });
     return () => {
       pusher.unsubscribe(

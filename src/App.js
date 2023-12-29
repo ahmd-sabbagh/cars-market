@@ -7,19 +7,19 @@ import axios from "axios";
 import { basedDomin } from "./Api/basedDomin";
 import { ErrorComponent } from "./Others/Error";
 import { useRecoilState, useRecoilValue } from "recoil";
-import {
-  brandsCarsFromApi,
-  repeatCountries,
-} from "./Recoil/All/GeneralData";
+import { brandsCarsFromApi, repeatCountries } from "./Recoil/All/GeneralData";
 import { LoaderState, LoaderStateEdit } from "./Recoil/All/Loader";
 import MainLoader from "./Components/MainLoader/MainLoader";
 import AOS from "aos";
 import { generateYears } from "./Recoil/All/GenerateYears";
 import GetYears from "./Components/GetYears/GetYears";
 import Msg from "./Components/MsgNotification/Msg";
+import { showNotificationMsg } from "./Components/MsgNotification/recoil/atoms";
+import Pusher from "pusher-js";
 
 function App() {
   const language = localStorage.getItem("i18nextLng");
+  const userId = JSON.parse(localStorage.getItem("user"))?.id;
   const navigate = useNavigate();
   // get genral data
   // States Data
@@ -27,6 +27,9 @@ function App() {
   const [loaderEdit, setLoaderEdit] = useRecoilState(LoaderStateEdit);
   const [years, setYears] = useRecoilState(generateYears);
   // States Data
+  // Show Notification Msg
+  const showNotificationmsg = useRecoilValue(showNotificationMsg);
+  // Show Notification Msg
   const [countriesState, setCountriesState] = useRecoilState(repeatCountries);
   const [brandsCar, setBrandsCar] = useRecoilState(brandsCarsFromApi);
   const getGeneralData = () => {
@@ -51,6 +54,17 @@ function App() {
     GetYears(setYears);
     getGeneralData();
     AOS.init();
+    // Notifications
+    const pusher = new Pusher("e1a99b18f88e0adba1aa", {
+      cluster: "eu",
+    });
+    const channel = pusher.subscribe(`user-data-${userId}`);
+    channel.bind("notify", (notify) => {
+      console.log(notify);
+    });
+    return () => {
+      pusher.unsubscribe(`user-data-${userId}`);
+    };
   }, []);
   return (
     <>
@@ -62,7 +76,7 @@ function App() {
         dir={language === "en" ? "ltr" : "rtl"}
       >
         <ScrollToTop />
-        <Msg />
+        {showNotificationmsg && <Msg />}
         <Navbar />
         <Outlet />
         <Footer />

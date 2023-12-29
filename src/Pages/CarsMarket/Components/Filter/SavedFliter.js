@@ -90,7 +90,7 @@ function SavedFliter() {
               data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-duration="500"
-              data-aos-offset="0"
+              data-aos-offset="5"
             >
               <h5 className="mb-3">
                 {item.brand
